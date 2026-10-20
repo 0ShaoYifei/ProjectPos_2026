@@ -22,3 +22,7 @@ The existing application code did not change in Phase 4. The earlier genuine 21 
 ## Remaining student actions
 
 Rehearse and measure actual duration, record the presentation and genuine application demonstration, review the video, upload to Bilibili and supply the published URL. The new recording operation will produce a new receipt and refund number. Use new uniquely labelled recording products for a fresh repeat rather than resetting recorded transactions. Student review and course submission remain outstanding. Git publication status is recorded separately after the actual commit, merge and push attempt.
+
+## Actual Git completion outcome
+
+Committed the materials on preserved `feature/presentation` as e2c7561 and merged them into main with merge commit 32052f9. The normal noninteractive push at 23:00:20 exited 128 because command-line credentials were unavailable. GitHub Desktop publication remains a student action; see phase4-publication-status.md. The local source and requested final materials are complete.

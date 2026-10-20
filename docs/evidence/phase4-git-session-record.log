@@ -816,3 +816,151 @@ warning: in the working copy of 'scripts/prepare-recording-data.cjs', LF will be
 warning: in the working copy of 'scripts/verify-phase4.py', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'scripts/verify-recording-database.ps1', LF will be replaced by CRLF the next time Git touches it
 exit=0
+
+[2026-10-20T22:59:11.0654643+08:00] git add docs\evidence\phase4-source-audit.json docs\evidence\phase4-database-verification.log docs\evidence\phase4-git-session-record.log
+warning: in the working copy of 'docs/evidence/phase4-git-session-record.log', LF will be replaced by CRLF the next time Git touches it
+exit=0
+
+[2026-10-20T22:59:11.2693852+08:00] git diff --cached --check
+exit=0
+
+[2026-10-20T22:59:11.4227020+08:00] git commit -m docs: prepare verified presentation scripts and bilingual defense materials
+[feature/presentation e2c7561] docs: prepare verified presentation scripts and bilingual defense materials
+ 29 files changed, 2183 insertions(+), 3 deletions(-)
+ create mode 100644 deliverables/presentation/Project_Explanation_ZH.md
+ create mode 100644 deliverables/presentation/README.md
+ create mode 100644 deliverables/presentation/Recording_Guide_ZH.md
+ create mode 100644 deliverables/presentation/assets/provenance.json
+ create mode 100644 deliverables/presentation/assets/refund-ledger-detail.png
+ create mode 100644 deliverables/presentation/defense_content.json
+ create mode 100644 deliverables/presentation/presentation_content.json
+ create mode 100644 docs/evidence/phase4-content-verification.log
+ create mode 100644 docs/evidence/phase4-database-verification.log
+ create mode 100644 docs/evidence/phase4-development-log.md
+ create mode 100644 docs/evidence/phase4-final-verification.json
+ create mode 100644 docs/evidence/phase4-git-session-record.log
+ create mode 100644 docs/evidence/phase4-office-document-export.log
+ create mode 100644 docs/evidence/phase4-office-slide-export.log
+ create mode 100644 docs/evidence/phase4-progress.csv
+ create mode 100644 docs/evidence/phase4-recording-data.json
+ create mode 100644 docs/evidence/phase4-source-audit.json
+ create mode 100644 docs/evidence/screenshots/11-recording-products.png
+ create mode 100644 scripts/build-phase4-docs.py
+ create mode 100644 scripts/build-presentation-assets.py
+ create mode 100644 scripts/build-presentation.mjs
+ create mode 100644 scripts/export-phase4-office.ps1
+ create mode 100644 scripts/prepare-recording-data.cjs
+ create mode 100644 scripts/verify-phase4.py
+ create mode 100644 scripts/verify-recording-database.ps1
+exit=0
+
+[2026-10-20T22:59:47.7726981+08:00] git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+exit=0
+
+[2026-10-20T22:59:48.0010297+08:00] git merge --no-ff feature/presentation -m merge: integrate verified presentation and recording preparation
+Merge made by the 'ort' strategy.
+ .gitignore                                         |   3 +
+ README.md                                          |   4 +-
+ .../presentation/Project_Explanation_ZH.md         | 236 ++++++
+ deliverables/presentation/README.md                |  33 +
+ deliverables/presentation/Recording_Guide_ZH.md    | 137 ++++
+ deliverables/presentation/assets/provenance.json   |  12 +
+ .../presentation/assets/refund-ledger-detail.png   | Bin 0 -> 6231 bytes
+ deliverables/presentation/defense_content.json     |  22 +
+ .../presentation/presentation_content.json         | 277 +++++++
+ deliverables/report/report_evidence_checklist.md   |   2 +-
+ docs/evidence/development-log.md                   |   2 +
+ docs/evidence/phase4-content-verification.log      |   2 +
+ docs/evidence/phase4-database-verification.log     |  25 +
+ docs/evidence/phase4-development-log.md            |  24 +
+ docs/evidence/phase4-final-verification.json       | 109 +++
+ docs/evidence/phase4-git-session-record.log        | 818 +++++++++++++++++++++
+ docs/evidence/phase4-office-document-export.log    |   5 +
+ docs/evidence/phase4-office-slide-export.log       |   1 +
+ docs/evidence/phase4-progress.csv                  |   2 +
+ docs/evidence/phase4-recording-data.json           |  27 +
+ docs/evidence/phase4-source-audit.json             |   8 +
+ .../evidence/screenshots/11-recording-products.png | Bin 0 -> 44791 bytes
+ scripts/build-phase4-docs.py                       | 103 +++
+ scripts/build-presentation-assets.py               |  10 +
+ scripts/build-presentation.mjs                     | 133 ++++
+ scripts/export-phase4-office.ps1                   |  43 ++
+ scripts/prepare-recording-data.cjs                 |  29 +
+ scripts/verify-phase4.py                           |  99 +++
+ scripts/verify-recording-database.ps1              |  20 +
+ 29 files changed, 2183 insertions(+), 3 deletions(-)
+ create mode 100644 deliverables/presentation/Project_Explanation_ZH.md
+ create mode 100644 deliverables/presentation/README.md
+ create mode 100644 deliverables/presentation/Recording_Guide_ZH.md
+ create mode 100644 deliverables/presentation/assets/provenance.json
+ create mode 100644 deliverables/presentation/assets/refund-ledger-detail.png
+ create mode 100644 deliverables/presentation/defense_content.json
+ create mode 100644 deliverables/presentation/presentation_content.json
+ create mode 100644 docs/evidence/phase4-content-verification.log
+ create mode 100644 docs/evidence/phase4-database-verification.log
+ create mode 100644 docs/evidence/phase4-development-log.md
+ create mode 100644 docs/evidence/phase4-final-verification.json
+ create mode 100644 docs/evidence/phase4-git-session-record.log
+ create mode 100644 docs/evidence/phase4-office-document-export.log
+ create mode 100644 docs/evidence/phase4-office-slide-export.log
+ create mode 100644 docs/evidence/phase4-progress.csv
+ create mode 100644 docs/evidence/phase4-recording-data.json
+ create mode 100644 docs/evidence/phase4-source-audit.json
+ create mode 100644 docs/evidence/screenshots/11-recording-products.png
+ create mode 100644 scripts/build-phase4-docs.py
+ create mode 100644 scripts/build-presentation-assets.py
+ create mode 100644 scripts/build-presentation.mjs
+ create mode 100644 scripts/export-phase4-office.ps1
+ create mode 100644 scripts/prepare-recording-data.cjs
+ create mode 100644 scripts/verify-phase4.py
+ create mode 100644 scripts/verify-recording-database.ps1
+exit=0
+
+[2026-10-20T22:59:48.3298847+08:00] git -c http.proxy=http://127.0.0.1:7890 ls-remote --heads origin
+ce6281910f8fce03483113b7472ea0acd8799ae4	refs/heads/feature/documentation
+a1fb0aa56f01405b23a6b203c1e17267011a2f59	refs/heads/feature/handle-returns
+5183641044c730f6af92f7707599cf48ebbec86b	refs/heads/feature/process-sale
+9f587a05d93d30d3dbd762f3352263c8576bd376	refs/heads/feature/product-management
+1316a7c19873c52b678277958483220ca2ac18dc	refs/heads/main
+exit=0
+
+[2026-10-20T23:00:20.8552576+08:00] git -c http.proxy=http://127.0.0.1:7890 -c credential.interactive=never push origin main feature/presentation
+fatal: Cannot prompt because user interactivity has been disabled.
+fatal: unable to get password from user
+exit=128
+
+[2026-10-20T23:02:27.2577528+08:00] git log --oneline --graph --decorate --all -n 16
+*   32052f9 (HEAD -> main) merge: integrate verified presentation and recording preparation
+|\  
+| * e2c7561 (feature/presentation) docs: prepare verified presentation scripts and bilingual defense materials
+|/  
+*   1316a7c (origin/main, origin/HEAD) merge: integrate verified technical report quizzes and development evidence
+|\  
+| * ce62819 (origin/feature/documentation, feature/documentation) docs: finalize verified English report quizzes and authentic delivery evidence
+| *   fdd0815 merge: include preserved GitHub initial history in documentation branch
+| |\  
+| |/  
+|/|   
+* |   8cb0771 merge: preserve GitHub initial README history alongside verified POS implementation
+|\ \  
+| * | 3e6c025 Initial commit
+|  /  
+| * fd7a3da docs: add source mapped quizzes and evidence based report sources for layout review
+|/  
+*   a570cfb merge: integrate verified returns and end to end evidence
+|\  
+| * a1fb0aa (origin/feature/handle-returns, feature/handle-returns) feat: handle audited returns and verify cash workflows on real MySQL
+|/  
+*   d129a15 merge: integrate verified cash sale increment
+|\  
+| * 5183641 (origin/feature/process-sale, feature/process-sale) feat: process cash sales atomically and issue persistent receipts
+|/  
+*   9f3d709 merge: integrate verified product and inventory increment
+|\  
+| * 9f587a0 (origin/feature/product-management, feature/product-management) docs: record product commit and keep active command journal outside tracked files
+| * f716d77 feat: manage products and inventory with validation and stale edit protection
+|/  
+* 28474c2 chore: preserve inspected Spring Boot starter and establish evidence baseline
+exit=0
