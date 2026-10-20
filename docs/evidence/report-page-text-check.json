@@ -1,0 +1,162 @@
+[
+  {
+    "pdf_page": 1,
+    "characters": 276,
+    "preview": " \n \n \n \nSoftware Engineering Practice \n \nAnalysis and Design of a PoS \nSystem  \n \n \n \n \nName: Yifei Shao \nNUIST ID: 202383890019 \nSETU ID: 2"
+  },
+  {
+    "pdf_page": 2,
+    "characters": 4679,
+    "preview": " \n \nContents \nChapter 1 Introduction ......................................................................................................."
+  },
+  {
+    "pdf_page": 3,
+    "characters": 888,
+    "preview": " \n \n9.1 Initial state and individual authorship ............................................................................... 25 \n9.2 Pres"
+  },
+  {
+    "pdf_page": 4,
+    "characters": 2560,
+    "preview": " \n1 \nChapter 1 Introduction \nProjectPos_2026 is a small supermarket Point-of-Sale application developed for the \nindividual Software Enginee"
+  },
+  {
+    "pdf_page": 5,
+    "characters": 2126,
+    "preview": " \n2 \nChapter 2 Part 1 Agile Development Process \n2.1 Individual Scrum adaptation \nThe project uses an individual adaptation of Scrum: the st"
+  },
+  {
+    "pdf_page": 6,
+    "characters": 2051,
+    "preview": " \n3 \nID Epic User story Priority Result \nP12 Validation As a cashier, I want invalid transactions \nrejected with English messages. Must Veri"
+  },
+  {
+    "pdf_page": 7,
+    "characters": 1174,
+    "preview": " \n4 \nTable 3  Observed implementation increments  \nIncrement Verified output Evidence \nProduct Product forms, inventory and stale edit \nchec"
+  },
+  {
+    "pdf_page": 8,
+    "characters": 628,
+    "preview": " \n5 \nTime UTC plus 8 Verified items Remaining items \n19:17:20 8 10 \n19:26:10 15 3 \n19:39:36 16 2 \n \nThe initial backlog contained 18 items. "
+  },
+  {
+    "pdf_page": 9,
+    "characters": 1233,
+    "preview": " \n6 \nChapter 3 Part 2 Requirements and Use Case Analysis \n3.1 Functional requirements and business rules \nThe cashier manages unique barcode"
+  },
+  {
+    "pdf_page": 10,
+    "characters": 3165,
+    "preview": " \n7 \ntransaction review support the required core use cases. The boundary includes the local \ndatabase; no external card, accounting or inve"
+  },
+  {
+    "pdf_page": 11,
+    "characters": 1728,
+    "preview": " \n8 \n1. The cashier opens Transactions and returns and enters the sale number or chooses \na receipt. \n2. The system displays original items,"
+  },
+  {
+    "pdf_page": 12,
+    "characters": 73,
+    "preview": " \n9 \n \nFigure 3  Process Sale SSD with stock and payment alternatives.  \n"
+  },
+  {
+    "pdf_page": 13,
+    "characters": 77,
+    "preview": " \n10 \n \nFigure 4  Handle Returns SSD including invalid quantity rejection.  \n"
+  },
+  {
+    "pdf_page": 14,
+    "characters": 1464,
+    "preview": " \n11 \nChapter 4 Domain Model \n4.1 Conceptual classes \nThe model identifies four business concepts. Product describes a catalog item and its "
+  },
+  {
+    "pdf_page": 15,
+    "characters": 957,
+    "preview": " \n12 \nChapter 5 Logical Architecture \n5.1 MVC and responsibility boundaries \nSpring MVC separates presentation from business use cases. Thym"
+  },
+  {
+    "pdf_page": 16,
+    "characters": 798,
+    "preview": " \n13 \n5.2 Architectural rationale \nRefund and inventory rules can be tested without web-page interaction. Changing layout \ndoes not require "
+  },
+  {
+    "pdf_page": 17,
+    "characters": 1100,
+    "preview": " \n14 \nChapter 6 Object Oriented Design \n6.1 Classes and responsibilities \nTable 5  Important design responsibilities  \nClass Responsibility "
+  },
+  {
+    "pdf_page": 18,
+    "characters": 111,
+    "preview": " \n15 \n \nFigure 7  Design classes for all four persistent entities. Selected fields and operations are shown.  \n"
+  },
+  {
+    "pdf_page": 19,
+    "characters": 497,
+    "preview": " \n16 \n \nFigure 8  Selected Process Sale controller, service and repository dependencies.  \n6.2 Interaction diagrams \nSaleController enters t"
+  },
+  {
+    "pdf_page": 20,
+    "characters": 510,
+    "preview": " \n17 \n \nFigure 9  Internal checkout collaboration within one transaction.  \nReturns use a locked SaleItem to serialize competing requests. A"
+  },
+  {
+    "pdf_page": 21,
+    "characters": 1253,
+    "preview": " \n18 \n \nFigure 10  Internal return collaboration using actual controller, service and repository roles.  \n6.3 Responsibility assignment and "
+  },
+  {
+    "pdf_page": 22,
+    "characters": 2257,
+    "preview": " \n19 \nChapter 7 Implementation \n7.1 Configuration and persistence \nMaven retains the supplied Spring Boot parent and adds H2 only in test sc"
+  },
+  {
+    "pdf_page": 23,
+    "characters": 555,
+    "preview": " \n20 \n \nFigure 12  Actual POS -1 receipt: total 16.80, cash 20.00 and change 3.20. Unaltered detail crop. \n7.4 Return processing and error h"
+  },
+  {
+    "pdf_page": 24,
+    "characters": 512,
+    "preview": " \n21 \n \nFigure 13  Actual return form and refund ledger after one rice unit was returned for CNY 6.50.  \nController advice renders business "
+  },
+  {
+    "pdf_page": 25,
+    "characters": 2133,
+    "preview": " \n22 \nChapter 8 Testing and Results \n8.1 Actual environment and test separation \nVerification ran on Windows 11 with Oracle JDK 21 and the M"
+  },
+  {
+    "pdf_page": 26,
+    "characters": 2536,
+    "preview": " \n23 \nScenario Expected result Observed result \nInsufficient \npayment Reject 16.79 for the 16.80 cart English error; cart retained; screensh"
+  },
+  {
+    "pdf_page": 27,
+    "characters": 714,
+    "preview": " \n24 \npackaged document renderer could not find LibreOffice in the Windows runtime. Installed \nMicrosoft Word successfully exported the docu"
+  },
+  {
+    "pdf_page": 28,
+    "characters": 2500,
+    "preview": " \n25 \nChapter 9 Git and GitHub Version Control \n9.1 Initial state and individual authorship \nInitial status, branch, remote and log commands"
+  },
+  {
+    "pdf_page": 29,
+    "characters": 1093,
+    "preview": " \n26 \ngit commit -m \"feat: manage products and inventory with validation and stale edit protection\" \ngit merge --no-ff feature/product-manag"
+  },
+  {
+    "pdf_page": 30,
+    "characters": 1395,
+    "preview": " \n27 \nChapter 10 Conclusion \nThe application supports both required use cases with catalog management, exact cash \ncalculations, receipts, t"
+  },
+  {
+    "pdf_page": 31,
+    "characters": 1320,
+    "preview": " \n28 \nAppendix A Source and Evidence Index \nAuthoritative specification: references/Software Engineering Practice Assignment.docx. \nCover ba"
+  },
+  {
+    "pdf_page": 32,
+    "characters": 1274,
+    "preview": " \n29 \nA.1 Actual implementation excerpts \nThe following excerpts are taken from the implementation; surrounding statements are \nomitted for "
+  }
+]

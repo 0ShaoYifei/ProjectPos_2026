@@ -1,0 +1,43 @@
+@startuml
+skinparam backgroundColor white
+skinparam defaultFontName Arial
+skinparam defaultFontSize 16
+skinparam shadowing false
+skinparam ArrowColor #333333
+skinparam classBackgroundColor #F5F8F8
+skinparam classBorderColor #354F52
+skinparam packageBackgroundColor #F5F8F8
+skinparam packageBorderColor #354F52
+skinparam sequenceParticipantBackgroundColor #F5F8F8
+skinparam sequenceParticipantBorderColor #354F52
+skinparam dpi 160
+participant "web" as C
+participant "returns" as S
+participant "items" as I
+participant "products" as P
+participant "records" as R
+C -> S: process(...)
+activate S
+S -> R: findByRequestKey(key)
+R --> S: existing refund or empty
+S -> I: findLocked(itemId, saleId)
+I --> S: purchased SaleItem
+S -> R: findByRequestKey(key)
+note over S
+Check remaining quantity.
+end note
+S -> P: findLockedById(productId)
+P --> S: Product
+note over S
+Restore stock and recordReturn(qty).
+Refund uses original unit price.
+end note
+S -> R: saveAndFlush(returnRecord)
+R --> S: saved refund record
+S --> C: ReturnRecord
+note over S,R
+One transaction; rollback on failure.
+end note
+deactivate S
+
+@enduml

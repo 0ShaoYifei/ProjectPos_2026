@@ -1,0 +1,43 @@
+@startuml
+skinparam backgroundColor white
+skinparam defaultFontName Arial
+skinparam defaultFontSize 16
+skinparam shadowing false
+skinparam ArrowColor #333333
+skinparam classBackgroundColor #F5F8F8
+skinparam classBorderColor #354F52
+skinparam packageBackgroundColor #F5F8F8
+skinparam packageBorderColor #354F52
+skinparam sequenceParticipantBackgroundColor #F5F8F8
+skinparam sequenceParticipantBorderColor #354F52
+skinparam dpi 160
+hide circle
+skinparam classAttributeIconSize 0
+class SaleController {
+ +newSale(session, model)
+ +checkout(cash, key, session, redirect)
+ +receipt(id, model)
+}
+class SaleService {
+ +preview(quantities)
+ +checkout(quantities, cash, key)
+ +get(id)
+ +all()
+}
+interface ProductRepository {
+ +findLockedById(id)
+}
+interface SaleRepository {
+ +findByCheckoutKey(key)
+ +findDetailedById(id)
+ +saveAndFlush(sale)
+}
+SaleController --> SaleService : delegates
+SaleService --> ProductRepository : locks inventory
+SaleService --> SaleRepository : records sale
+note bottom of SaleRepository
+Repositories extend JpaRepository.
+Selected Process Sale dependencies.
+end note
+
+@enduml

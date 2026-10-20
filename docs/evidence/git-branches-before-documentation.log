@@ -1,0 +1,5 @@
+* feature/documentation      a570cfb merge: integrate verified returns and end to end evidence
+  feature/handle-returns     a1fb0aa feat: handle audited returns and verify cash workflows on real MySQL
+  feature/process-sale       5183641 feat: process cash sales atomically and issue persistent receipts
+  feature/product-management 9f587a0 docs: record product commit and keep active command journal outside tracked files
+  main                       a570cfb merge: integrate verified returns and end to end evidence

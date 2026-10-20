@@ -1,0 +1,614 @@
+
+[2026-10-20T19:13:53.7094487+08:00] git add docs\evidence\git-commands.log scripts\git-record.ps1
+warning: in the working copy of 'docs/evidence/git-commands.log', LF will be replaced by CRLF the next time Git touches it
+exit=0
+
+[2026-10-20T19:13:53.8907122+08:00] git commit -m docs: record product commit and keep active command journal outside tracked files
+[feature/product-management 9f587a0] docs: record product commit and keep active command journal outside tracked files
+ 2 files changed, 45 insertions(+), 1 deletion(-)
+exit=0
+
+[2026-10-20T19:13:54.1693065+08:00] git switch main
+Switched to branch 'main'
+exit=0
+
+[2026-10-20T19:14:08.9234139+08:00] git merge --no-ff feature/product-management -m merge: integrate verified product and inventory increment
+Merge made by the 'ort' strategy.
+ .mvn/wrapper/maven-wrapper.properties              |   2 +-
+ docs/evidence/2026-10-20-products-final-test.log   |  92 ++
+ docs/evidence/2026-10-20-products-test.log         | 611 +++++++++++++
+ docs/evidence/development-log.md                   |   2 +
+ docs/evidence/git-commands.log                     |  46 +
+ docs/evidence/pdf-page-inventory.csv               | 961 +++++++++++++++++++++
+ docs/evidence/progress.csv                         |   1 +
+ pom.xml                                            |   5 +
+ scripts/git-record.ps1                             |   9 +
+ .../controller/ProductController.java              |  37 +
+ .../projectpos_2026/controller/ProductForm.java    |  26 +
+ .../controller/WebConfiguration.java               |  30 +
+ .../projectpos_2026/controller/WebErrors.java      |  24 +
+ .../example/projectpos_2026/entity/Product.java    |  53 ++
+ .../exception/BusinessException.java               |   5 +
+ .../repository/ProductRepository.java              |  16 +
+ .../projectpos_2026/service/ProductService.java    |  35 +
+ src/main/resources/static/style.css                |   1 +
+ src/main/resources/templates/error.html            |   1 +
+ src/main/resources/templates/fragments.html        |   4 +
+ src/main/resources/templates/product-form.html     |   7 +
+ src/main/resources/templates/products.html         |   5 +
+ .../service/ProductServiceTests.java               |  40 +
+ .../resources/application-mysql-test.properties    |   5 +
+ src/test/resources/application.properties          |   7 +
+ 25 files changed, 2024 insertions(+), 1 deletion(-)
+ create mode 100644 docs/evidence/2026-10-20-products-final-test.log
+ create mode 100644 docs/evidence/2026-10-20-products-test.log
+ create mode 100644 docs/evidence/git-commands.log
+ create mode 100644 docs/evidence/pdf-page-inventory.csv
+ create mode 100644 scripts/git-record.ps1
+ create mode 100644 src/main/java/com/example/projectpos_2026/controller/ProductController.java
+ create mode 100644 src/main/java/com/example/projectpos_2026/controller/ProductForm.java
+ create mode 100644 src/main/java/com/example/projectpos_2026/controller/WebConfiguration.java
+ create mode 100644 src/main/java/com/example/projectpos_2026/controller/WebErrors.java
+ create mode 100644 src/main/java/com/example/projectpos_2026/entity/Product.java
+ create mode 100644 src/main/java/com/example/projectpos_2026/exception/BusinessException.java
+ create mode 100644 src/main/java/com/example/projectpos_2026/repository/ProductRepository.java
+ create mode 100644 src/main/java/com/example/projectpos_2026/service/ProductService.java
+ create mode 100644 src/main/resources/static/style.css
+ create mode 100644 src/main/resources/templates/error.html
+ create mode 100644 src/main/resources/templates/fragments.html
+ create mode 100644 src/main/resources/templates/product-form.html
+ create mode 100644 src/main/resources/templates/products.html
+ create mode 100644 src/test/java/com/example/projectpos_2026/service/ProductServiceTests.java
+ create mode 100644 src/test/resources/application-mysql-test.properties
+ create mode 100644 src/test/resources/application.properties
+exit=0
+
+[2026-10-20T19:14:09.3369271+08:00] git switch -c feature/process-sale
+Switched to a new branch 'feature/process-sale'
+exit=0
+
+[2026-10-20T19:17:20.8904202+08:00] git add src docs\evidence
+warning: in the working copy of 'docs/evidence/development-log.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/java/com/example/projectpos_2026/controller/SaleController.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/java/com/example/projectpos_2026/controller/ShoppingCart.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/java/com/example/projectpos_2026/entity/Sale.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/java/com/example/projectpos_2026/entity/SaleItem.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/java/com/example/projectpos_2026/repository/SaleRepository.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/java/com/example/projectpos_2026/service/SaleService.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/test/java/com/example/projectpos_2026/service/SaleServiceTests.java', LF will be replaced by CRLF the next time Git touches it
+exit=0
+
+[2026-10-20T19:17:21.4658965+08:00] git commit -m feat: process cash sales atomically and issue persistent receipts
+[feature/process-sale 5183641] feat: process cash sales atomically and issue persistent receipts
+ 13 files changed, 409 insertions(+)
+ create mode 100644 docs/evidence/2026-10-20-sales-test.log
+ create mode 100644 src/main/java/com/example/projectpos_2026/controller/SaleController.java
+ create mode 100644 src/main/java/com/example/projectpos_2026/controller/ShoppingCart.java
+ create mode 100644 src/main/java/com/example/projectpos_2026/entity/Sale.java
+ create mode 100644 src/main/java/com/example/projectpos_2026/entity/SaleItem.java
+ create mode 100644 src/main/java/com/example/projectpos_2026/repository/SaleRepository.java
+ create mode 100644 src/main/java/com/example/projectpos_2026/service/SaleService.java
+ create mode 100644 src/main/resources/templates/receipt.html
+ create mode 100644 src/main/resources/templates/sale-form.html
+ create mode 100644 src/main/resources/templates/sales.html
+ create mode 100644 src/test/java/com/example/projectpos_2026/service/SaleServiceTests.java
+exit=0
+
+[2026-10-20T19:17:22.3027119+08:00] git switch main
+Switched to branch 'main'
+exit=0
+
+[2026-10-20T19:17:22.4439100+08:00] git merge --no-ff feature/process-sale -m merge: integrate verified cash sale increment
+Merge made by the 'ort' strategy.
+ docs/evidence/2026-10-20-sales-test.log            | 101 +++++++++++++++++++++
+ docs/evidence/development-log.md                   |   2 +
+ docs/evidence/progress.csv                         |   1 +
+ .../projectpos_2026/controller/SaleController.java |  60 ++++++++++++
+ .../projectpos_2026/controller/ShoppingCart.java   |  21 +++++
+ .../com/example/projectpos_2026/entity/Sale.java   |  35 +++++++
+ .../example/projectpos_2026/entity/SaleItem.java   |  38 ++++++++
+ .../projectpos_2026/repository/SaleRepository.java |  11 +++
+ .../projectpos_2026/service/SaleService.java       |  59 ++++++++++++
+ src/main/resources/templates/receipt.html          |   1 +
+ src/main/resources/templates/sale-form.html        |   1 +
+ src/main/resources/templates/sales.html            |   1 +
+ .../projectpos_2026/service/SaleServiceTests.java  |  78 ++++++++++++++++
+ 13 files changed, 409 insertions(+)
+ create mode 100644 docs/evidence/2026-10-20-sales-test.log
+ create mode 100644 src/main/java/com/example/projectpos_2026/controller/SaleController.java
+ create mode 100644 src/main/java/com/example/projectpos_2026/controller/ShoppingCart.java
+ create mode 100644 src/main/java/com/example/projectpos_2026/entity/Sale.java
+ create mode 100644 src/main/java/com/example/projectpos_2026/entity/SaleItem.java
+ create mode 100644 src/main/java/com/example/projectpos_2026/repository/SaleRepository.java
+ create mode 100644 src/main/java/com/example/projectpos_2026/service/SaleService.java
+ create mode 100644 src/main/resources/templates/receipt.html
+ create mode 100644 src/main/resources/templates/sale-form.html
+ create mode 100644 src/main/resources/templates/sales.html
+ create mode 100644 src/test/java/com/example/projectpos_2026/service/SaleServiceTests.java
+exit=0
+
+[2026-10-20T19:17:22.7133711+08:00] git switch -c feature/handle-returns
+Switched to a new branch 'feature/handle-returns'
+exit=0
+
+[2026-10-20T19:26:27.6448818+08:00] git add src docs scripts README.md
+warning: in the working copy of 'docs/evidence/development-log.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/resources/application.properties', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/evidence/demo-records.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/evidence/live-http-first-attempt.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/evidence/live-http-results.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'scripts/export-word-pdf.ps1', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'scripts/run-local.ps1', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/java/com/example/projectpos_2026/controller/ReturnController.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/java/com/example/projectpos_2026/entity/ReturnRecord.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/java/com/example/projectpos_2026/repository/ReturnRepository.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/java/com/example/projectpos_2026/repository/SaleItemRepository.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/java/com/example/projectpos_2026/service/ReturnService.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/resources/messages.properties', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/test/java/com/example/projectpos_2026/service/ConcurrencyTests.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/test/java/com/example/projectpos_2026/service/ReturnServiceTests.java', LF will be replaced by CRLF the next time Git touches it
+exit=0
+
+[2026-10-20T19:26:28.1378339+08:00] git commit -m feat: handle audited returns and verify cash workflows on real MySQL
+[feature/handle-returns a1fb0aa] feat: handle audited returns and verify cash workflows on real MySQL
+ 43 files changed, 1064 insertions(+), 3 deletions(-)
+ create mode 100644 README.md
+ create mode 100644 docs/evidence/2026-10-20-application-run.log
+ create mode 100644 docs/evidence/2026-10-20-browser-first-attempt.log
+ create mode 100644 docs/evidence/2026-10-20-browser-verification.log
+ create mode 100644 docs/evidence/2026-10-20-clean-package.log
+ create mode 100644 docs/evidence/2026-10-20-database-final-verification.log
+ create mode 100644 docs/evidence/2026-10-20-database-verification.log
+ create mode 100644 docs/evidence/2026-10-20-mysql-integration-retry.log
+ create mode 100644 docs/evidence/2026-10-20-mysql-integration-test.log
+ create mode 100644 docs/evidence/2026-10-20-mysql-test-database.log
+ create mode 100644 docs/evidence/2026-10-20-returns-test.log
+ create mode 100644 docs/evidence/demo-records.json
+ create mode 100644 docs/evidence/document-renderer-attempt.log
+ create mode 100644 docs/evidence/live-http-first-attempt.json
+ create mode 100644 docs/evidence/live-http-results.json
+ create mode 100644 docs/evidence/screenshots/01-products.png
+ create mode 100644 docs/evidence/screenshots/02-insufficient-stock.png
+ create mode 100644 docs/evidence/screenshots/03-sale-cart.png
+ create mode 100644 docs/evidence/screenshots/04-insufficient-payment.png
+ create mode 100644 docs/evidence/screenshots/05-paid-receipt.png
+ create mode 100644 docs/evidence/screenshots/06-excessive-return.png
+ create mode 100644 docs/evidence/screenshots/07-return-refund.png
+ create mode 100644 docs/evidence/screenshots/08-updated-inventory.png
+ create mode 100644 docs/evidence/screenshots/09-transactions.png
+ create mode 100644 docs/evidence/screenshots/failure.png
+ create mode 100644 docs/evidence/word-cover-export.log
+ create mode 100644 scripts/export-word-pdf.ps1
+ create mode 100644 scripts/run-local.ps1
+ create mode 100644 scripts/verify-live.cjs
+ create mode 100644 src/main/java/com/example/projectpos_2026/controller/ReturnController.java
+ create mode 100644 src/main/java/com/example/projectpos_2026/entity/ReturnRecord.java
+ create mode 100644 src/main/java/com/example/projectpos_2026/repository/ReturnRepository.java
+ create mode 100644 src/main/java/com/example/projectpos_2026/repository/SaleItemRepository.java
+ create mode 100644 src/main/java/com/example/projectpos_2026/service/ReturnService.java
+ create mode 100644 src/main/resources/messages.properties
+ create mode 100644 src/test/java/com/example/projectpos_2026/service/ConcurrencyTests.java
+ create mode 100644 src/test/java/com/example/projectpos_2026/service/ReturnServiceTests.java
+exit=0
+
+[2026-10-20T19:26:29.2899210+08:00] git switch main
+warning: unable to unlink 'docs/evidence/2026-10-20-application-run.log': Invalid argument
+Switched to branch 'main'
+exit=0
+
+[2026-10-20T19:26:29.5560571+08:00] git merge --no-ff feature/handle-returns -m merge: integrate verified returns and end to end evidence
+error: The following untracked working tree files would be overwritten by merge:
+	docs/evidence/2026-10-20-application-run.log
+Please move or remove them before you merge.
+Aborting
+Merge with strategy ort failed.
+exit=2
+
+[2026-10-20T19:26:56.4715094+08:00] git merge --no-ff feature/handle-returns -m merge: integrate verified returns and end to end evidence
+Merge made by the 'ort' strategy.
+ README.md                                          |  52 +++++++++
+ docs/evidence/2026-10-20-application-run.log       |  70 ++++++++++++
+ docs/evidence/2026-10-20-browser-first-attempt.log |  12 +++
+ docs/evidence/2026-10-20-browser-verification.log  |  13 +++
+ docs/evidence/2026-10-20-clean-package.log         | 120 +++++++++++++++++++++
+ .../2026-10-20-database-final-verification.log     |  23 ++++
+ docs/evidence/2026-10-20-database-verification.log |  14 +++
+ .../2026-10-20-mysql-integration-retry.log         | 108 +++++++++++++++++++
+ .../evidence/2026-10-20-mysql-integration-test.log |  18 ++++
+ docs/evidence/2026-10-20-mysql-test-database.log   |   3 +
+ docs/evidence/2026-10-20-returns-test.log          | 113 +++++++++++++++++++
+ docs/evidence/demo-records.json                    |  19 ++++
+ docs/evidence/development-log.md                   |   2 +
+ docs/evidence/document-renderer-attempt.log        |  78 ++++++++++++++
+ docs/evidence/live-http-first-attempt.json         |  25 +++++
+ docs/evidence/live-http-results.json               |  94 ++++++++++++++++
+ docs/evidence/progress.csv                         |   1 +
+ docs/evidence/screenshots/01-products.png          | Bin 0 -> 35996 bytes
+ .../evidence/screenshots/02-insufficient-stock.png | Bin 0 -> 46232 bytes
+ docs/evidence/screenshots/03-sale-cart.png         | Bin 0 -> 50168 bytes
+ .../screenshots/04-insufficient-payment.png        | Bin 0 -> 52818 bytes
+ docs/evidence/screenshots/05-paid-receipt.png      | Bin 0 -> 72803 bytes
+ docs/evidence/screenshots/06-excessive-return.png  | Bin 0 -> 73285 bytes
+ docs/evidence/screenshots/07-return-refund.png     | Bin 0 -> 84081 bytes
+ docs/evidence/screenshots/08-updated-inventory.png | Bin 0 -> 35995 bytes
+ docs/evidence/screenshots/09-transactions.png      | Bin 0 -> 33540 bytes
+ docs/evidence/screenshots/failure.png              | Bin 0 -> 44250 bytes
+ docs/evidence/word-cover-export.log                |   1 +
+ scripts/export-word-pdf.ps1                        |  18 ++++
+ scripts/run-local.ps1                              |   8 ++
+ scripts/verify-live.cjs                            |  33 ++++++
+ .../controller/ReturnController.java               |  23 ++++
+ .../projectpos_2026/controller/SaleController.java |   6 +-
+ .../controller/WebConfiguration.java               |   4 +
+ .../projectpos_2026/entity/ReturnRecord.java       |  28 +++++
+ .../repository/ReturnRepository.java               |  10 ++
+ .../repository/SaleItemRepository.java             |  13 +++
+ .../projectpos_2026/service/ReturnService.java     |  41 +++++++
+ src/main/resources/application.properties          |   1 +
+ src/main/resources/messages.properties             |   4 +
+ src/main/resources/templates/receipt.html          |   3 +-
+ .../projectpos_2026/service/ConcurrencyTests.java  |  38 +++++++
+ .../service/ReturnServiceTests.java                |  71 ++++++++++++
+ 43 files changed, 1064 insertions(+), 3 deletions(-)
+ create mode 100644 README.md
+ create mode 100644 docs/evidence/2026-10-20-application-run.log
+ create mode 100644 docs/evidence/2026-10-20-browser-first-attempt.log
+ create mode 100644 docs/evidence/2026-10-20-browser-verification.log
+ create mode 100644 docs/evidence/2026-10-20-clean-package.log
+ create mode 100644 docs/evidence/2026-10-20-database-final-verification.log
+ create mode 100644 docs/evidence/2026-10-20-database-verification.log
+ create mode 100644 docs/evidence/2026-10-20-mysql-integration-retry.log
+ create mode 100644 docs/evidence/2026-10-20-mysql-integration-test.log
+ create mode 100644 docs/evidence/2026-10-20-mysql-test-database.log
+ create mode 100644 docs/evidence/2026-10-20-returns-test.log
+ create mode 100644 docs/evidence/demo-records.json
+ create mode 100644 docs/evidence/document-renderer-attempt.log
+ create mode 100644 docs/evidence/live-http-first-attempt.json
+ create mode 100644 docs/evidence/live-http-results.json
+ create mode 100644 docs/evidence/screenshots/01-products.png
+ create mode 100644 docs/evidence/screenshots/02-insufficient-stock.png
+ create mode 100644 docs/evidence/screenshots/03-sale-cart.png
+ create mode 100644 docs/evidence/screenshots/04-insufficient-payment.png
+ create mode 100644 docs/evidence/screenshots/05-paid-receipt.png
+ create mode 100644 docs/evidence/screenshots/06-excessive-return.png
+ create mode 100644 docs/evidence/screenshots/07-return-refund.png
+ create mode 100644 docs/evidence/screenshots/08-updated-inventory.png
+ create mode 100644 docs/evidence/screenshots/09-transactions.png
+ create mode 100644 docs/evidence/screenshots/failure.png
+ create mode 100644 docs/evidence/word-cover-export.log
+ create mode 100644 scripts/export-word-pdf.ps1
+ create mode 100644 scripts/run-local.ps1
+ create mode 100644 scripts/verify-live.cjs
+ create mode 100644 src/main/java/com/example/projectpos_2026/controller/ReturnController.java
+ create mode 100644 src/main/java/com/example/projectpos_2026/entity/ReturnRecord.java
+ create mode 100644 src/main/java/com/example/projectpos_2026/repository/ReturnRepository.java
+ create mode 100644 src/main/java/com/example/projectpos_2026/repository/SaleItemRepository.java
+ create mode 100644 src/main/java/com/example/projectpos_2026/service/ReturnService.java
+ create mode 100644 src/main/resources/messages.properties
+ create mode 100644 src/test/java/com/example/projectpos_2026/service/ConcurrencyTests.java
+ create mode 100644 src/test/java/com/example/projectpos_2026/service/ReturnServiceTests.java
+exit=0
+
+[2026-10-20T19:26:56.8446651+08:00] git switch -c feature/documentation
+Switched to a new branch 'feature/documentation'
+exit=0
+
+[2026-10-20T19:26:57.0130531+08:00] git log --graph --oneline --decorate --all
+*   a570cfb (HEAD -> feature/documentation, main) merge: integrate verified returns and end to end evidence
+|\  
+| * a1fb0aa (feature/handle-returns) feat: handle audited returns and verify cash workflows on real MySQL
+|/  
+*   d129a15 merge: integrate verified cash sale increment
+|\  
+| * 5183641 (feature/process-sale) feat: process cash sales atomically and issue persistent receipts
+|/  
+*   9f3d709 merge: integrate verified product and inventory increment
+|\  
+| * 9f587a0 (feature/product-management) docs: record product commit and keep active command journal outside tracked files
+| * f716d77 feat: manage products and inventory with validation and stale edit protection
+|/  
+* 28474c2 chore: preserve inspected Spring Boot starter and establish evidence baseline
+exit=0
+
+[2026-10-20T19:26:57.1254029+08:00] git remote
+exit=0
+
+[2026-10-20T19:37:38.8649478+08:00] git log --graph --oneline --decorate --all
+*   a570cfb (HEAD -> feature/documentation, main) merge: integrate verified returns and end to end evidence
+|\  
+| * a1fb0aa (feature/handle-returns) feat: handle audited returns and verify cash workflows on real MySQL
+|/  
+*   d129a15 merge: integrate verified cash sale increment
+|\  
+| * 5183641 (feature/process-sale) feat: process cash sales atomically and issue persistent receipts
+|/  
+*   9f3d709 merge: integrate verified product and inventory increment
+|\  
+| * 9f587a0 (feature/product-management) docs: record product commit and keep active command journal outside tracked files
+| * f716d77 feat: manage products and inventory with validation and stale edit protection
+|/  
+* 28474c2 chore: preserve inspected Spring Boot starter and establish evidence baseline
+exit=0
+
+[2026-10-20T19:54:30.0939371+08:00] git ls-remote https://github.com/0ShaoYifei/ProjectPos_2026.git
+fatal: unable to access 'https://github.com/0ShaoYifei/ProjectPos_2026.git/': Recv failure: Connection was reset
+exit=128
+
+[2026-10-20T19:55:33.0695409+08:00] git -c http.version=HTTP/1.1 ls-remote https://github.com/0ShaoYifei/ProjectPos_2026.git
+fatal: unable to access 'https://github.com/0ShaoYifei/ProjectPos_2026.git/': Failed to connect to github.com port 443 after 21117 ms: Could not connect to server
+exit=128
+
+[2026-10-20T19:57:58.7371812+08:00] git -c http.proxy=http://127.0.0.1:7890 ls-remote https://github.com/0ShaoYifei/ProjectPos_2026.git
+3e6c025856637ca206cc42cad2888679e30263a6	HEAD
+3e6c025856637ca206cc42cad2888679e30263a6	refs/heads/main
+exit=0
+
+[2026-10-20T19:57:59.9842409+08:00] git remote add origin https://github.com/0ShaoYifei/ProjectPos_2026.git
+exit=0
+
+[2026-10-20T19:58:00.1128646+08:00] git -c http.proxy=http://127.0.0.1:7890 fetch origin
+From https://github.com/0ShaoYifei/ProjectPos_2026
+ * [new branch]      main       -> origin/main
+exit=0
+
+[2026-10-20T19:58:01.8275387+08:00] git remote
+origin
+exit=0
+
+[2026-10-20T19:59:08.1222312+08:00] git show --stat --oneline origin/main
+3e6c025 Initial commit
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+exit=0
+
+[2026-10-20T19:59:08.3437404+08:00] git show origin/main:README.md
+# ProjectPos_2026
+exit=0
+
+[2026-10-20T19:59:08.4667667+08:00] git status --short
+ M docs/evidence/development-log.md
+ M docs/evidence/progress.csv
+?? deliverables/
+?? docs/evidence/git-branches-before-documentation.log
+?? docs/evidence/git-history-before-documentation.log
+?? docs/evidence/git-session-record.log
+?? docs/evidence/quiz-structure-check.json
+?? docs/evidence/report-page-text-check.json
+?? docs/evidence/report-template-preservation.json
+?? docs/evidence/uml-render-final.log
+?? docs/evidence/uml-render.log
+?? docs/evidence/word-report-export.log
+?? docs/product-backlog.csv
+?? scripts/build_diagrams.py
+?? scripts/build_quizzes.py
+?? scripts/build_report.py
+?? scripts/build_report_assets.py
+?? scripts/prepare_quiz_content.py
+?? scripts/render_pdf.py
+exit=0
+
+[2026-10-20T20:00:02.2540898+08:00] git add .gitignore docs scripts deliverables
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/evidence/development-log.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'deliverables/report/report_assets/10-recorded-burndown.pdf', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/evidence/github-connection.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'scripts/build_report_assets.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'scripts/render_pdf.py', LF will be replaced by CRLF the next time Git touches it
+exit=0
+
+[2026-10-20T20:00:03.1273000+08:00] git diff --cached --stat
+ .gitignore                                         |   4 +
+ deliverables/quizzes/Quiz_Source_Map.md            |  53 +++
+ deliverables/quizzes/quiz_content.json             |  36 ++
+ deliverables/report/POS_Technical_Report.md        | 410 +++++++++++++++++++++
+ deliverables/report/report_assets/01-use-cases.png | Bin 0 -> 71279 bytes
+ .../report/report_assets/01-use-cases.puml         |  31 ++
+ deliverables/report/report_assets/01-use-cases.svg |   1 +
+ .../report/report_assets/02-ssd-process-sale.png   | Bin 0 -> 92436 bytes
+ .../report/report_assets/02-ssd-process-sale.puml  |  33 ++
+ .../report/report_assets/02-ssd-process-sale.svg   |   1 +
+ .../report/report_assets/03-ssd-handle-returns.png | Bin 0 -> 78150 bytes
+ .../report_assets/03-ssd-handle-returns.puml       |  29 ++
+ .../report/report_assets/03-ssd-handle-returns.svg |   1 +
+ .../report/report_assets/04-domain-model.png       | Bin 0 -> 87276 bytes
+ .../report/report_assets/04-domain-model.puml      |  50 +++
+ .../report/report_assets/04-domain-model.svg       |   1 +
+ .../report/report_assets/05-package-model.png      | Bin 0 -> 137729 bytes
+ .../report/report_assets/05-package-model.puml     |  45 +++
+ .../report/report_assets/05-package-model.svg      |   1 +
+ .../report_assets/06-interaction-checkout.png      | Bin 0 -> 128639 bytes
+ .../report_assets/06-interaction-checkout.puml     |  42 +++
+ .../report_assets/06-interaction-checkout.svg      |   1 +
+ .../report/report_assets/07-interaction-return.png | Bin 0 -> 104657 bytes
+ .../report_assets/07-interaction-return.puml       |  43 +++
+ .../report/report_assets/07-interaction-return.svg |   1 +
+ .../report/report_assets/08-design-entities.png    | Bin 0 -> 139953 bytes
+ .../report/report_assets/08-design-entities.puml   |  62 ++++
+ .../report/report_assets/08-design-entities.svg    |   1 +
+ .../report/report_assets/09-design-services.png    | Bin 0 -> 99572 bytes
+ .../report/report_assets/09-design-services.puml   |  43 +++
+ .../report/report_assets/09-design-services.svg    |   1 +
+ .../report/report_assets/10-recorded-burndown.pdf  |  74 ++++
+ .../report/report_assets/10-recorded-burndown.png  | Bin 0 -> 69180 bytes
+ .../report/report_assets/10-recorded-burndown.svg  |  97 +++++
+ .../report/report_assets/11-products-detail.png    | Bin 0 -> 23451 bytes
+ .../report/report_assets/12-receipt-detail.png     | Bin 0 -> 29511 bytes
+ .../report/report_assets/13-return-detail.png      | Bin 0 -> 39655 bytes
+ .../report_assets/14-payment-error-detail.png      | Bin 0 -> 43100 bytes
+ .../report/report_assets/burndown_data.csv         |   6 +
+ .../report_assets/screenshot-provenance.json       |  50 +++
+ docs/evidence/development-log.md                   |   2 +
+ .../evidence/git-branches-before-documentation.log |   5 +
+ docs/evidence/git-history-before-documentation.log |  14 +
+ docs/evidence/git-session-record.log               | 332 +++++++++++++++++
+ docs/evidence/github-connection.md                 |   7 +
+ docs/evidence/github-initial-readme.md             |   1 +
+ docs/evidence/progress.csv                         |   1 +
+ docs/evidence/quiz-structure-check.json            |  16 +
+ docs/evidence/report-page-text-check.json          | 182 +++++++++
+ docs/evidence/report-template-preservation.json    |  82 +++++
+ docs/evidence/uml-render-final.log                 |   0
+ docs/evidence/uml-render.log                       |   4 +
+ docs/evidence/word-report-export.log               |   1 +
+ docs/product-backlog.csv                           |  19 +
+ scripts/build_diagrams.py                          | 274 ++++++++++++++
+ scripts/build_quizzes.py                           |  50 +++
+ scripts/build_report.py                            | 330 +++++++++++++++++
+ scripts/build_report_assets.py                     |  31 ++
+ scripts/prepare_quiz_content.py                    |  39 ++
+ scripts/render_pdf.py                              |   7 +
+ 60 files changed, 2514 insertions(+)
+exit=0
+
+[2026-10-20T20:00:04.1712978+08:00] git commit -m docs: add source mapped quizzes and evidence based report sources for layout review
+[feature/documentation fd7a3da] docs: add source mapped quizzes and evidence based report sources for layout review
+ 60 files changed, 2514 insertions(+)
+ create mode 100644 deliverables/quizzes/Quiz_Source_Map.md
+ create mode 100644 deliverables/quizzes/quiz_content.json
+ create mode 100644 deliverables/report/POS_Technical_Report.md
+ create mode 100644 deliverables/report/report_assets/01-use-cases.png
+ create mode 100644 deliverables/report/report_assets/01-use-cases.puml
+ create mode 100644 deliverables/report/report_assets/01-use-cases.svg
+ create mode 100644 deliverables/report/report_assets/02-ssd-process-sale.png
+ create mode 100644 deliverables/report/report_assets/02-ssd-process-sale.puml
+ create mode 100644 deliverables/report/report_assets/02-ssd-process-sale.svg
+ create mode 100644 deliverables/report/report_assets/03-ssd-handle-returns.png
+ create mode 100644 deliverables/report/report_assets/03-ssd-handle-returns.puml
+ create mode 100644 deliverables/report/report_assets/03-ssd-handle-returns.svg
+ create mode 100644 deliverables/report/report_assets/04-domain-model.png
+ create mode 100644 deliverables/report/report_assets/04-domain-model.puml
+ create mode 100644 deliverables/report/report_assets/04-domain-model.svg
+ create mode 100644 deliverables/report/report_assets/05-package-model.png
+ create mode 100644 deliverables/report/report_assets/05-package-model.puml
+ create mode 100644 deliverables/report/report_assets/05-package-model.svg
+ create mode 100644 deliverables/report/report_assets/06-interaction-checkout.png
+ create mode 100644 deliverables/report/report_assets/06-interaction-checkout.puml
+ create mode 100644 deliverables/report/report_assets/06-interaction-checkout.svg
+ create mode 100644 deliverables/report/report_assets/07-interaction-return.png
+ create mode 100644 deliverables/report/report_assets/07-interaction-return.puml
+ create mode 100644 deliverables/report/report_assets/07-interaction-return.svg
+ create mode 100644 deliverables/report/report_assets/08-design-entities.png
+ create mode 100644 deliverables/report/report_assets/08-design-entities.puml
+ create mode 100644 deliverables/report/report_assets/08-design-entities.svg
+ create mode 100644 deliverables/report/report_assets/09-design-services.png
+ create mode 100644 deliverables/report/report_assets/09-design-services.puml
+ create mode 100644 deliverables/report/report_assets/09-design-services.svg
+ create mode 100644 deliverables/report/report_assets/10-recorded-burndown.pdf
+ create mode 100644 deliverables/report/report_assets/10-recorded-burndown.png
+ create mode 100644 deliverables/report/report_assets/10-recorded-burndown.svg
+ create mode 100644 deliverables/report/report_assets/11-products-detail.png
+ create mode 100644 deliverables/report/report_assets/12-receipt-detail.png
+ create mode 100644 deliverables/report/report_assets/13-return-detail.png
+ create mode 100644 deliverables/report/report_assets/14-payment-error-detail.png
+ create mode 100644 deliverables/report/report_assets/burndown_data.csv
+ create mode 100644 deliverables/report/report_assets/screenshot-provenance.json
+ create mode 100644 docs/evidence/git-branches-before-documentation.log
+ create mode 100644 docs/evidence/git-history-before-documentation.log
+ create mode 100644 docs/evidence/git-session-record.log
+ create mode 100644 docs/evidence/github-connection.md
+ create mode 100644 docs/evidence/github-initial-readme.md
+ create mode 100644 docs/evidence/quiz-structure-check.json
+ create mode 100644 docs/evidence/report-page-text-check.json
+ create mode 100644 docs/evidence/report-template-preservation.json
+ create mode 100644 docs/evidence/uml-render-final.log
+ create mode 100644 docs/evidence/uml-render.log
+ create mode 100644 docs/evidence/word-report-export.log
+ create mode 100644 docs/product-backlog.csv
+ create mode 100644 scripts/build_diagrams.py
+ create mode 100644 scripts/build_quizzes.py
+ create mode 100644 scripts/build_report.py
+ create mode 100644 scripts/build_report_assets.py
+ create mode 100644 scripts/prepare_quiz_content.py
+ create mode 100644 scripts/render_pdf.py
+exit=0
+
+[2026-10-20T20:00:04.5483550+08:00] git switch main
+Switched to branch 'main'
+exit=0
+
+[2026-10-20T20:00:04.7490734+08:00] git merge --allow-unrelated-histories --no-ff -X ours origin/main -m merge: preserve GitHub initial README history alongside verified POS implementation
+Auto-merging README.md
+Merge made by the 'ort' strategy.
+exit=0
+
+[2026-10-20T20:00:09.3509279+08:00] git -c http.proxy=http://127.0.0.1:7890 push --dry-run origin main feature/product-management feature/process-sale feature/handle-returns
+remote: Invalid username or token. Password authentication is not supported for Git operations.
+fatal: Authentication failed for 'https://github.com/0ShaoYifei/ProjectPos_2026.git/'
+exit=128
+
+[2026-10-20T20:01:25.4468438+08:00] git switch feature/documentation
+Switched to branch 'feature/documentation'
+exit=0
+
+[2026-10-20T20:01:25.7814700+08:00] git merge --no-ff main -m merge: include preserved GitHub initial history in documentation branch
+Merge made by the 'ort' strategy.
+exit=0
+
+[2026-10-20T20:01:26.7271750+08:00] git log --graph --oneline --decorate --all
+*   fdd0815 (HEAD -> feature/documentation) merge: include preserved GitHub initial history in documentation branch
+|\  
+| *   8cb0771 (main) merge: preserve GitHub initial README history alongside verified POS implementation
+| |\  
+| | * 3e6c025 (origin/main, origin/HEAD) Initial commit
+* | fd7a3da docs: add source mapped quizzes and evidence based report sources for layout review
+|/  
+*   a570cfb merge: integrate verified returns and end to end evidence
+|\  
+| * a1fb0aa (feature/handle-returns) feat: handle audited returns and verify cash workflows on real MySQL
+|/  
+*   d129a15 merge: integrate verified cash sale increment
+|\  
+| * 5183641 (feature/process-sale) feat: process cash sales atomically and issue persistent receipts
+|/  
+*   9f3d709 merge: integrate verified product and inventory increment
+|\  
+| * 9f587a0 (feature/product-management) docs: record product commit and keep active command journal outside tracked files
+| * f716d77 feat: manage products and inventory with validation and stale edit protection
+|/  
+* 28474c2 chore: preserve inspected Spring Boot starter and establish evidence baseline
+exit=0
+
+[2026-10-20T20:04:20.5330911+08:00] git -c http.proxy=http://127.0.0.1:7890 push --dry-run origin main feature/product-management feature/process-sale feature/handle-returns
+fatal: Cannot prompt because user interactivity has been disabled.
+fatal: could not read Username for 'https://github.com': terminal prompts disabled
+exit=128
+
+[2026-10-20T20:12:00.0930115+08:00] git stash push -m pos-report-final-layout
+Saved working directory and index state On feature/documentation: pos-report-final-layout
+exit=0
+
+[2026-10-20T20:12:00.6352570+08:00] git switch main
+Switched to branch 'main'
+exit=0
+
+[2026-10-20T20:21:07.4995181+08:00] git -c http.proxy=http://127.0.0.1:7890 ls-remote --heads origin
+fdd081520fcbe47847bf9806a7d36bcf31230f67	refs/heads/feature/documentation
+a1fb0aa56f01405b23a6b203c1e17267011a2f59	refs/heads/feature/handle-returns
+5183641044c730f6af92f7707599cf48ebbec86b	refs/heads/feature/process-sale
+9f587a05d93d30d3dbd762f3352263c8576bd376	refs/heads/feature/product-management
+8cb0771047bbfc2644afef8e2fdbb49992ec496d	refs/heads/main
+exit=0
+
+[2026-10-20T20:21:44.6537299+08:00] git switch feature/documentation
+Switched to branch 'feature/documentation'
+Your branch is up to date with 'origin/feature/documentation'.
+exit=0
+
+[2026-10-20T20:21:45.0500505+08:00] git stash pop
+On branch feature/documentation
+Your branch is up to date with 'origin/feature/documentation'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   deliverables/report/POS_Technical_Report.md
+	modified:   docs/evidence/report-page-text-check.json
+	modified:   docs/evidence/word-report-export.log
+	modified:   docs/product-backlog.csv
+	modified:   scripts/build_report.py
+	modified:   scripts/export-word-pdf.ps1
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (c19b8bf6ffd4208a82f96d0051e3382cce76417d)
+exit=0

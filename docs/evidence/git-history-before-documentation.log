@@ -1,0 +1,14 @@
+*   a570cfb (HEAD -> feature/documentation, main) merge: integrate verified returns and end to end evidence
+|\  
+| * a1fb0aa (feature/handle-returns) feat: handle audited returns and verify cash workflows on real MySQL
+|/  
+*   d129a15 merge: integrate verified cash sale increment
+|\  
+| * 5183641 (feature/process-sale) feat: process cash sales atomically and issue persistent receipts
+|/  
+*   9f3d709 merge: integrate verified product and inventory increment
+|\  
+| * 9f587a0 (feature/product-management) docs: record product commit and keep active command journal outside tracked files
+| * f716d77 feat: manage products and inventory with validation and stale edit protection
+|/  
+* 28474c2 chore: preserve inspected Spring Boot starter and establish evidence baseline

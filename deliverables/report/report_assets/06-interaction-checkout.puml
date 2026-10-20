@@ -1,0 +1,42 @@
+@startuml
+skinparam backgroundColor white
+skinparam defaultFontName Arial
+skinparam defaultFontSize 16
+skinparam shadowing false
+skinparam ArrowColor #333333
+skinparam classBackgroundColor #F5F8F8
+skinparam classBorderColor #354F52
+skinparam packageBackgroundColor #F5F8F8
+skinparam packageBorderColor #354F52
+skinparam sequenceParticipantBackgroundColor #F5F8F8
+skinparam sequenceParticipantBorderColor #354F52
+skinparam dpi 160
+participant "web :\nSaleController" as C
+participant "sales :\nSaleService" as S
+participant "products" as P
+participant "records :\nSaleRepository" as R
+C -> S: checkout(items, cash, key)
+activate S
+S -> R: findByCheckoutKey(key)
+R --> S: existing sale or empty
+loop Product IDs in sorted order
+ S -> P: findLockedById(id)
+ P --> S: locked Product
+end
+S -> R: findByCheckoutKey(key)
+R --> S: duplicate check
+note over S
+Validate quantities, active state,
+stock and payment. Create SaleItems,
+record cash and reduce stock.
+end note
+S -> R: saveAndFlush(sale)
+R --> S: saved Sale
+S --> C: saved Sale
+note over S,R
+One transaction commits all changes.
+Any business failure rolls back.
+end note
+deactivate S
+
+@enduml

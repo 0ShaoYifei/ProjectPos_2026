@@ -1,0 +1,89 @@
+{
+  "recorded_at": "2026-10-20T12:33:52.224807+00:00",
+  "quizzes": [
+    {
+      "quiz": 1,
+      "questions": 15,
+      "answers": 15,
+      "original_wording": true,
+      "all_answers_present_in_pdf": true,
+      "pdf_pages": 4,
+      "docx_sha256": "037dea237cc772326094ff8c75c8485290a30a051a55d5605c3517c895fde6e7",
+      "pdf_sha256": "b4c611a9b8c5adb05e92e52199b64a5ebef36e9158f3026b8279829c28f2bf06"
+    },
+    {
+      "quiz": 2,
+      "questions": 15,
+      "answers": 15,
+      "original_wording": true,
+      "all_answers_present_in_pdf": true,
+      "pdf_pages": 4,
+      "docx_sha256": "f444fee7aa2634c04be7cdc8ff1ee4debd8262202965a5d653440706fa5d9496",
+      "pdf_sha256": "3649e4f30f4d4ceb09ba95211b4d905d7ef4bf1df793a4edb09700bb054e5341"
+    }
+  ],
+  "report": {
+    "pdf_pages": 32,
+    "chapters": 10,
+    "tables": 9,
+    "figures": 14,
+    "english_body": true,
+    "template_parts_preserved": true,
+    "contents_verified": [
+      {
+        "title": "Chapter 1 Introduction",
+        "pdf_page": 4,
+        "printed_page": 1
+      },
+      {
+        "title": "Chapter 2 Part 1 Agile Development Process",
+        "pdf_page": 5,
+        "printed_page": 2
+      },
+      {
+        "title": "Chapter 3 Part 2 Requirements and Use Case Analysis",
+        "pdf_page": 9,
+        "printed_page": 6
+      },
+      {
+        "title": "Chapter 4 Domain Model",
+        "pdf_page": 14,
+        "printed_page": 11
+      },
+      {
+        "title": "Chapter 5 Logical Architecture",
+        "pdf_page": 15,
+        "printed_page": 12
+      },
+      {
+        "title": "Chapter 6 Object Oriented Design",
+        "pdf_page": 17,
+        "printed_page": 14
+      },
+      {
+        "title": "Chapter 7 Implementation",
+        "pdf_page": 22,
+        "printed_page": 19
+      },
+      {
+        "title": "Chapter 8 Testing and Results",
+        "pdf_page": 25,
+        "printed_page": 22
+      },
+      {
+        "title": "Chapter 9 Git and GitHub Version Control",
+        "pdf_page": 28,
+        "printed_page": 25
+      },
+      {
+        "title": "Chapter 10 Conclusion",
+        "pdf_page": 30,
+        "printed_page": 27
+      }
+    ],
+    "docx_sha256": "43bb8e47a5c17897c05d7a70d855aeda2be85aea1a71b8a3d50b2e5a2a98af76",
+    "pdf_sha256": "0761ff454b5844dde2e391877c11afac9690d137ab1d3ad8b2aaafe696966292",
+    "all_32_pages_visually_reviewed": true,
+    "visual_result": "No clipped text/images, overlap, missing glyphs or broken table rows observed."
+  }
+}

@@ -1,0 +1,45 @@
+@startuml
+skinparam backgroundColor white
+skinparam defaultFontName Arial
+skinparam defaultFontSize 16
+skinparam shadowing false
+skinparam ArrowColor #333333
+skinparam classBackgroundColor #F5F8F8
+skinparam classBorderColor #354F52
+skinparam packageBackgroundColor #F5F8F8
+skinparam packageBorderColor #354F52
+skinparam sequenceParticipantBackgroundColor #F5F8F8
+skinparam sequenceParticipantBorderColor #354F52
+skinparam dpi 160
+top to bottom direction
+package "Presentation" {
+ package "Thymeleaf templates" as Views
+ package "controller" as Controllers
+}
+package "Application logic" {
+ package "service" as Services
+}
+package "Persistence access" {
+ package "repository" as Repositories
+}
+package "Domain data and rules" {
+ package "entity" as Entities
+}
+package "Shared errors" {
+ package "exception" as Errors
+}
+Views ..> Controllers : submits HTTP requests
+Controllers ..> Services : delegates use cases
+Services ..> Repositories : queries and locks
+Services ..> Entities : applies domain rules
+Repositories ..> Entities : persists entities
+Controllers ..> Entities : renders read models
+Controllers ..> Errors
+Services ..> Errors
+Entities ..> Errors
+note bottom of Repositories
+Spring Data JPA / Hibernate
+persist entities in MySQL.
+end note
+
+@enduml
