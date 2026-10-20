@@ -330,3 +330,285 @@ exit=0
 |/  
 * 28474c2 chore: preserve inspected Spring Boot starter and establish evidence baseline
 exit=0
+
+[2026-10-20T19:54:30.0939371+08:00] git ls-remote https://github.com/0ShaoYifei/ProjectPos_2026.git
+fatal: unable to access 'https://github.com/0ShaoYifei/ProjectPos_2026.git/': Recv failure: Connection was reset
+exit=128
+
+[2026-10-20T19:55:33.0695409+08:00] git -c http.version=HTTP/1.1 ls-remote https://github.com/0ShaoYifei/ProjectPos_2026.git
+fatal: unable to access 'https://github.com/0ShaoYifei/ProjectPos_2026.git/': Failed to connect to github.com port 443 after 21117 ms: Could not connect to server
+exit=128
+
+[2026-10-20T19:57:58.7371812+08:00] git -c http.proxy=http://127.0.0.1:7890 ls-remote https://github.com/0ShaoYifei/ProjectPos_2026.git
+3e6c025856637ca206cc42cad2888679e30263a6	HEAD
+3e6c025856637ca206cc42cad2888679e30263a6	refs/heads/main
+exit=0
+
+[2026-10-20T19:57:59.9842409+08:00] git remote add origin https://github.com/0ShaoYifei/ProjectPos_2026.git
+exit=0
+
+[2026-10-20T19:58:00.1128646+08:00] git -c http.proxy=http://127.0.0.1:7890 fetch origin
+From https://github.com/0ShaoYifei/ProjectPos_2026
+ * [new branch]      main       -> origin/main
+exit=0
+
+[2026-10-20T19:58:01.8275387+08:00] git remote
+origin
+exit=0
+
+[2026-10-20T19:59:08.1222312+08:00] git show --stat --oneline origin/main
+3e6c025 Initial commit
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+exit=0
+
+[2026-10-20T19:59:08.3437404+08:00] git show origin/main:README.md
+# ProjectPos_2026
+exit=0
+
+[2026-10-20T19:59:08.4667667+08:00] git status --short
+ M docs/evidence/development-log.md
+ M docs/evidence/progress.csv
+?? deliverables/
+?? docs/evidence/git-branches-before-documentation.log
+?? docs/evidence/git-history-before-documentation.log
+?? docs/evidence/git-session-record.log
+?? docs/evidence/quiz-structure-check.json
+?? docs/evidence/report-page-text-check.json
+?? docs/evidence/report-template-preservation.json
+?? docs/evidence/uml-render-final.log
+?? docs/evidence/uml-render.log
+?? docs/evidence/word-report-export.log
+?? docs/product-backlog.csv
+?? scripts/build_diagrams.py
+?? scripts/build_quizzes.py
+?? scripts/build_report.py
+?? scripts/build_report_assets.py
+?? scripts/prepare_quiz_content.py
+?? scripts/render_pdf.py
+exit=0
+
+[2026-10-20T20:00:02.2540898+08:00] git add .gitignore docs scripts deliverables
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/evidence/development-log.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'deliverables/report/report_assets/10-recorded-burndown.pdf', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/evidence/github-connection.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'scripts/build_report_assets.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'scripts/render_pdf.py', LF will be replaced by CRLF the next time Git touches it
+exit=0
+
+[2026-10-20T20:00:03.1273000+08:00] git diff --cached --stat
+ .gitignore                                         |   4 +
+ deliverables/quizzes/Quiz_Source_Map.md            |  53 +++
+ deliverables/quizzes/quiz_content.json             |  36 ++
+ deliverables/report/POS_Technical_Report.md        | 410 +++++++++++++++++++++
+ deliverables/report/report_assets/01-use-cases.png | Bin 0 -> 71279 bytes
+ .../report/report_assets/01-use-cases.puml         |  31 ++
+ deliverables/report/report_assets/01-use-cases.svg |   1 +
+ .../report/report_assets/02-ssd-process-sale.png   | Bin 0 -> 92436 bytes
+ .../report/report_assets/02-ssd-process-sale.puml  |  33 ++
+ .../report/report_assets/02-ssd-process-sale.svg   |   1 +
+ .../report/report_assets/03-ssd-handle-returns.png | Bin 0 -> 78150 bytes
+ .../report_assets/03-ssd-handle-returns.puml       |  29 ++
+ .../report/report_assets/03-ssd-handle-returns.svg |   1 +
+ .../report/report_assets/04-domain-model.png       | Bin 0 -> 87276 bytes
+ .../report/report_assets/04-domain-model.puml      |  50 +++
+ .../report/report_assets/04-domain-model.svg       |   1 +
+ .../report/report_assets/05-package-model.png      | Bin 0 -> 137729 bytes
+ .../report/report_assets/05-package-model.puml     |  45 +++
+ .../report/report_assets/05-package-model.svg      |   1 +
+ .../report_assets/06-interaction-checkout.png      | Bin 0 -> 128639 bytes
+ .../report_assets/06-interaction-checkout.puml     |  42 +++
+ .../report_assets/06-interaction-checkout.svg      |   1 +
+ .../report/report_assets/07-interaction-return.png | Bin 0 -> 104657 bytes
+ .../report_assets/07-interaction-return.puml       |  43 +++
+ .../report/report_assets/07-interaction-return.svg |   1 +
+ .../report/report_assets/08-design-entities.png    | Bin 0 -> 139953 bytes
+ .../report/report_assets/08-design-entities.puml   |  62 ++++
+ .../report/report_assets/08-design-entities.svg    |   1 +
+ .../report/report_assets/09-design-services.png    | Bin 0 -> 99572 bytes
+ .../report/report_assets/09-design-services.puml   |  43 +++
+ .../report/report_assets/09-design-services.svg    |   1 +
+ .../report/report_assets/10-recorded-burndown.pdf  |  74 ++++
+ .../report/report_assets/10-recorded-burndown.png  | Bin 0 -> 69180 bytes
+ .../report/report_assets/10-recorded-burndown.svg  |  97 +++++
+ .../report/report_assets/11-products-detail.png    | Bin 0 -> 23451 bytes
+ .../report/report_assets/12-receipt-detail.png     | Bin 0 -> 29511 bytes
+ .../report/report_assets/13-return-detail.png      | Bin 0 -> 39655 bytes
+ .../report_assets/14-payment-error-detail.png      | Bin 0 -> 43100 bytes
+ .../report/report_assets/burndown_data.csv         |   6 +
+ .../report_assets/screenshot-provenance.json       |  50 +++
+ docs/evidence/development-log.md                   |   2 +
+ .../evidence/git-branches-before-documentation.log |   5 +
+ docs/evidence/git-history-before-documentation.log |  14 +
+ docs/evidence/git-session-record.log               | 332 +++++++++++++++++
+ docs/evidence/github-connection.md                 |   7 +
+ docs/evidence/github-initial-readme.md             |   1 +
+ docs/evidence/progress.csv                         |   1 +
+ docs/evidence/quiz-structure-check.json            |  16 +
+ docs/evidence/report-page-text-check.json          | 182 +++++++++
+ docs/evidence/report-template-preservation.json    |  82 +++++
+ docs/evidence/uml-render-final.log                 |   0
+ docs/evidence/uml-render.log                       |   4 +
+ docs/evidence/word-report-export.log               |   1 +
+ docs/product-backlog.csv                           |  19 +
+ scripts/build_diagrams.py                          | 274 ++++++++++++++
+ scripts/build_quizzes.py                           |  50 +++
+ scripts/build_report.py                            | 330 +++++++++++++++++
+ scripts/build_report_assets.py                     |  31 ++
+ scripts/prepare_quiz_content.py                    |  39 ++
+ scripts/render_pdf.py                              |   7 +
+ 60 files changed, 2514 insertions(+)
+exit=0
+
+[2026-10-20T20:00:04.1712978+08:00] git commit -m docs: add source mapped quizzes and evidence based report sources for layout review
+[feature/documentation fd7a3da] docs: add source mapped quizzes and evidence based report sources for layout review
+ 60 files changed, 2514 insertions(+)
+ create mode 100644 deliverables/quizzes/Quiz_Source_Map.md
+ create mode 100644 deliverables/quizzes/quiz_content.json
+ create mode 100644 deliverables/report/POS_Technical_Report.md
+ create mode 100644 deliverables/report/report_assets/01-use-cases.png
+ create mode 100644 deliverables/report/report_assets/01-use-cases.puml
+ create mode 100644 deliverables/report/report_assets/01-use-cases.svg
+ create mode 100644 deliverables/report/report_assets/02-ssd-process-sale.png
+ create mode 100644 deliverables/report/report_assets/02-ssd-process-sale.puml
+ create mode 100644 deliverables/report/report_assets/02-ssd-process-sale.svg
+ create mode 100644 deliverables/report/report_assets/03-ssd-handle-returns.png
+ create mode 100644 deliverables/report/report_assets/03-ssd-handle-returns.puml
+ create mode 100644 deliverables/report/report_assets/03-ssd-handle-returns.svg
+ create mode 100644 deliverables/report/report_assets/04-domain-model.png
+ create mode 100644 deliverables/report/report_assets/04-domain-model.puml
+ create mode 100644 deliverables/report/report_assets/04-domain-model.svg
+ create mode 100644 deliverables/report/report_assets/05-package-model.png
+ create mode 100644 deliverables/report/report_assets/05-package-model.puml
+ create mode 100644 deliverables/report/report_assets/05-package-model.svg
+ create mode 100644 deliverables/report/report_assets/06-interaction-checkout.png
+ create mode 100644 deliverables/report/report_assets/06-interaction-checkout.puml
+ create mode 100644 deliverables/report/report_assets/06-interaction-checkout.svg
+ create mode 100644 deliverables/report/report_assets/07-interaction-return.png
+ create mode 100644 deliverables/report/report_assets/07-interaction-return.puml
+ create mode 100644 deliverables/report/report_assets/07-interaction-return.svg
+ create mode 100644 deliverables/report/report_assets/08-design-entities.png
+ create mode 100644 deliverables/report/report_assets/08-design-entities.puml
+ create mode 100644 deliverables/report/report_assets/08-design-entities.svg
+ create mode 100644 deliverables/report/report_assets/09-design-services.png
+ create mode 100644 deliverables/report/report_assets/09-design-services.puml
+ create mode 100644 deliverables/report/report_assets/09-design-services.svg
+ create mode 100644 deliverables/report/report_assets/10-recorded-burndown.pdf
+ create mode 100644 deliverables/report/report_assets/10-recorded-burndown.png
+ create mode 100644 deliverables/report/report_assets/10-recorded-burndown.svg
+ create mode 100644 deliverables/report/report_assets/11-products-detail.png
+ create mode 100644 deliverables/report/report_assets/12-receipt-detail.png
+ create mode 100644 deliverables/report/report_assets/13-return-detail.png
+ create mode 100644 deliverables/report/report_assets/14-payment-error-detail.png
+ create mode 100644 deliverables/report/report_assets/burndown_data.csv
+ create mode 100644 deliverables/report/report_assets/screenshot-provenance.json
+ create mode 100644 docs/evidence/git-branches-before-documentation.log
+ create mode 100644 docs/evidence/git-history-before-documentation.log
+ create mode 100644 docs/evidence/git-session-record.log
+ create mode 100644 docs/evidence/github-connection.md
+ create mode 100644 docs/evidence/github-initial-readme.md
+ create mode 100644 docs/evidence/quiz-structure-check.json
+ create mode 100644 docs/evidence/report-page-text-check.json
+ create mode 100644 docs/evidence/report-template-preservation.json
+ create mode 100644 docs/evidence/uml-render-final.log
+ create mode 100644 docs/evidence/uml-render.log
+ create mode 100644 docs/evidence/word-report-export.log
+ create mode 100644 docs/product-backlog.csv
+ create mode 100644 scripts/build_diagrams.py
+ create mode 100644 scripts/build_quizzes.py
+ create mode 100644 scripts/build_report.py
+ create mode 100644 scripts/build_report_assets.py
+ create mode 100644 scripts/prepare_quiz_content.py
+ create mode 100644 scripts/render_pdf.py
+exit=0
+
+[2026-10-20T20:00:04.5483550+08:00] git switch main
+Switched to branch 'main'
+exit=0
+
+[2026-10-20T20:00:04.7490734+08:00] git merge --allow-unrelated-histories --no-ff -X ours origin/main -m merge: preserve GitHub initial README history alongside verified POS implementation
+Auto-merging README.md
+Merge made by the 'ort' strategy.
+exit=0
+
+[2026-10-20T20:00:09.3509279+08:00] git -c http.proxy=http://127.0.0.1:7890 push --dry-run origin main feature/product-management feature/process-sale feature/handle-returns
+remote: Invalid username or token. Password authentication is not supported for Git operations.
+fatal: Authentication failed for 'https://github.com/0ShaoYifei/ProjectPos_2026.git/'
+exit=128
+
+[2026-10-20T20:01:25.4468438+08:00] git switch feature/documentation
+Switched to branch 'feature/documentation'
+exit=0
+
+[2026-10-20T20:01:25.7814700+08:00] git merge --no-ff main -m merge: include preserved GitHub initial history in documentation branch
+Merge made by the 'ort' strategy.
+exit=0
+
+[2026-10-20T20:01:26.7271750+08:00] git log --graph --oneline --decorate --all
+*   fdd0815 (HEAD -> feature/documentation) merge: include preserved GitHub initial history in documentation branch
+|\  
+| *   8cb0771 (main) merge: preserve GitHub initial README history alongside verified POS implementation
+| |\  
+| | * 3e6c025 (origin/main, origin/HEAD) Initial commit
+* | fd7a3da docs: add source mapped quizzes and evidence based report sources for layout review
+|/  
+*   a570cfb merge: integrate verified returns and end to end evidence
+|\  
+| * a1fb0aa (feature/handle-returns) feat: handle audited returns and verify cash workflows on real MySQL
+|/  
+*   d129a15 merge: integrate verified cash sale increment
+|\  
+| * 5183641 (feature/process-sale) feat: process cash sales atomically and issue persistent receipts
+|/  
+*   9f3d709 merge: integrate verified product and inventory increment
+|\  
+| * 9f587a0 (feature/product-management) docs: record product commit and keep active command journal outside tracked files
+| * f716d77 feat: manage products and inventory with validation and stale edit protection
+|/  
+* 28474c2 chore: preserve inspected Spring Boot starter and establish evidence baseline
+exit=0
+
+[2026-10-20T20:04:20.5330911+08:00] git -c http.proxy=http://127.0.0.1:7890 push --dry-run origin main feature/product-management feature/process-sale feature/handle-returns
+fatal: Cannot prompt because user interactivity has been disabled.
+fatal: could not read Username for 'https://github.com': terminal prompts disabled
+exit=128
+
+[2026-10-20T20:12:00.0930115+08:00] git stash push -m pos-report-final-layout
+Saved working directory and index state On feature/documentation: pos-report-final-layout
+exit=0
+
+[2026-10-20T20:12:00.6352570+08:00] git switch main
+Switched to branch 'main'
+exit=0
+
+[2026-10-20T20:21:07.4995181+08:00] git -c http.proxy=http://127.0.0.1:7890 ls-remote --heads origin
+fdd081520fcbe47847bf9806a7d36bcf31230f67	refs/heads/feature/documentation
+a1fb0aa56f01405b23a6b203c1e17267011a2f59	refs/heads/feature/handle-returns
+5183641044c730f6af92f7707599cf48ebbec86b	refs/heads/feature/process-sale
+9f587a05d93d30d3dbd762f3352263c8576bd376	refs/heads/feature/product-management
+8cb0771047bbfc2644afef8e2fdbb49992ec496d	refs/heads/main
+exit=0
+
+[2026-10-20T20:21:44.6537299+08:00] git switch feature/documentation
+Switched to branch 'feature/documentation'
+Your branch is up to date with 'origin/feature/documentation'.
+exit=0
+
+[2026-10-20T20:21:45.0500505+08:00] git stash pop
+On branch feature/documentation
+Your branch is up to date with 'origin/feature/documentation'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   deliverables/report/POS_Technical_Report.md
+	modified:   docs/evidence/report-page-text-check.json
+	modified:   docs/evidence/word-report-export.log
+	modified:   docs/product-backlog.csv
+	modified:   scripts/build_report.py
+	modified:   scripts/export-word-pdf.ps1
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (c19b8bf6ffd4208a82f96d0051e3382cce76417d)
+exit=0

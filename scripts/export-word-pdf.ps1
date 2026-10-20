@@ -8,7 +8,7 @@ try{
  $word=New-Object -ComObject Word.Application
  $word.Visible=$false;$word.DisplayAlerts=0
  $document=$word.Documents.Open($source,$false,(-not $RefreshFields.IsPresent))
- if($RefreshFields){ $document.Repaginate(); foreach($toc in $document.TablesOfContents){$toc.Update()}; $document.Fields.Update() | Out-Null; $document.Repaginate(); foreach($toc in $document.TablesOfContents){$toc.UpdatePageNumbers()}; $document.Save() }
+ if($RefreshFields){ foreach($styleId in @(-20,-21)){ $tocStyle=$document.Styles.Item($styleId); $tocStyle.Font.Name='Arial'; $tocStyle.Font.Size=9.5; $tocStyle.ParagraphFormat.SpaceBefore=0; $tocStyle.ParagraphFormat.SpaceAfter=3; $tocStyle.ParagraphFormat.LineSpacingRule=0 }; $document.Repaginate(); foreach($toc in $document.TablesOfContents){$toc.Update()}; $document.Fields.Update() | Out-Null; $document.Repaginate(); foreach($toc in $document.TablesOfContents){$toc.UpdatePageNumbers()}; $document.Save() }
  $document.ExportAsFixedFormat($pdf,17)
  Write-Output "Exported $pdf | pages=$($document.ComputeStatistics(2))"
 }finally{

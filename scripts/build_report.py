@@ -121,19 +121,19 @@ backlog=[
 ('P13','Quality','As a developer, I want repeatable normal, exceptional and concurrency tests.','Must','Verified'),
 ('P14','Database','As a developer, I want real MySQL integration and table evidence.','Must','Verified'),
 ('P15','Evidence','As a student, I want genuine browser and database evidence.','Must','Verified'),
-('P16','GitHub','As a student, I want preserved Git branches and a confirmed remote repository.','Must','Local complete; remote pending'),
+('P16','GitHub','As a student, I want preserved Git branches and a confirmed remote repository.','Must','Verified'),
 ('P17','Quizzes','As a student, I want two complete source-mapped quizzes.','Must','Verified'),
 ('P18','Report','As a student, I want an editable report tied to actual evidence.','Must','This deliverable')]
 with Path('docs/product-backlog.csv').open('w',newline='',encoding='utf-8') as f:
  writer=csv.writer(f);writer.writerow(['id','epic','user_story','priority','status']);writer.writerows(backlog)
-table('Product backlog',['ID','Epic','User story','Priority','Result'],backlog,[.42,.65,2.52,.68,1.498])
-p('P05 acceptance requires insufficient cash to leave stock and the sale ledger unchanged. P10 and P11 require an original-price refund, a stock increase and a refund record in one transaction. P12 covers invalid quantities, invalid prices, excessive returns and stale product edits. P16 remains open until a project remote is confirmed and all preserved branches are pushed.')
+table('Product backlog',['ID','Epic','User story','Priority','Result'],backlog,[.42,.88,2.55,.68,1.238])
+p('P05 acceptance requires insufficient cash to leave stock and the sale ledger unchanged. P10 and P11 require an original-price refund, a stock increase and a refund record in one transaction. P12 covers invalid quantities, invalid prices, excessive returns and stale product edits. P16 was verified after all five branch hashes matched their GitHub references; final report verification is recorded separately in the evidence checklist.')
 h2('2.3 Sprint planning and increment records')
 p('The assignment suggests three-day or one-week sprints. The following three-day schedule is a planning baseline established on 20 October 2026 for reviewing and completing the coursework. It does not claim that three multi-day sprints have elapsed. Implementation increments were completed in the single recorded session on 20 October; later timeboxes remain proposed review and submission work.')
 table('Proposed three day timeboxes',['Window','Goal','Status at report preparation'],[
 ('20–22 Oct 2026','Products, sales, returns and technical verification','Code and verification completed on 20 Oct; student review remains.'),
 ('23–25 Oct 2026','Review quizzes, UML and report','Documents prepared early; the scheduled review is proposed.'),
-('26–28 Oct 2026','Presentation, video upload and GitHub submission','Proposed; completed external submissions are not claimed.')],[1.15,2.1,2.518])
+('26–28 Oct 2026','Presentation and video upload','Proposed; GitHub publication was completed early on 20 Oct.')],[1.15,2.1,2.518])
 table('Observed implementation increments',['Increment','Verified output','Evidence'],[
 ('Product','Product forms, inventory and stale edit checks','5 passing H2 tests; f716d77'),
 ('Sale','Cart, totals, cash, change and receipts','13 passing H2 tests; 5183641'),
@@ -262,15 +262,15 @@ p('Results are retained in 2026-10-20-database-final-verification.log. Baseline 
 h2('8.4 Corrections and verification limits')
 p('The offline baseline lacked a Surefire dependency. The wrapper was aligned with available Maven 3.8.5, dependencies were downloaded and later tests/package passed. PowerShell split the first unquoted MySQL profile argument; the quoted retry passed. A dropdown locator caused the initial browser timeout; selecting the observed select element corrected the test. Escaped line labels were corrected before the final successful PlantUML render.')
 p('Windows held an active server log open during a branch change. The POS server was stopped briefly, its active log was retained and the verified branch was merged. The packaged document renderer could not find LibreOffice in the Windows runtime. Installed Microsoft Word successfully exported the documents, and their PDF pages were rasterized for visual inspection.')
-p('Passed: the executed automated suites, packaging, SQL and listed browser checks. Blocked: project-specific GitHub push and video URL confirmation. Not executed: load testing, long-duration reliability testing, penetration testing, hardware printing/cash-drawer tests and external payment integrations. No coverage percentage or unmeasured performance result is claimed.')
+p('Passed: the executed automated suites, packaging, SQL, listed browser checks and subsequent GitHub publication. Initial local Git authentication failed; the student signed into GitHub Desktop, which successfully pushed the branches. Pending: demonstration video upload and URL. Not executed: load testing, long-duration reliability testing, penetration testing, hardware printing/cash-drawer tests and external payment integrations. No coverage percentage or unmeasured performance result is claimed.')
 
 h1('Chapter 9 Git and GitHub Version Control')
 h2('9.1 Initial state and individual authorship')
 p('Initial status, branch, remote and log commands reported that the directory was not a Git repository. No earlier local history was available there. Git was initialized on 20 October 2026 after credentials were removed from tracked configuration, and the sanitized starter became the baseline. Commits use the student’s existing configured Git identity. This is individual development; no collaborators are invented.')
-p('The GitHub connector authenticated as 0ShaoYifei but returned no accessible owned ProjectPos_2026 repository. There is no origin remote locally. The prior report’s GitHub link belongs to the robot project and is not used as the POS repository. Project repository URL: https://github.com/0ShaoYifei/ProjectPos_2026. No remote push or screenshot of a completed POS GitHub repository is claimed.')
+p('The student created and supplied https://github.com/0ShaoYifei/ProjectPos_2026 under the verified account 0ShaoYifei. Remote inspection found initial README commit 3e6c025. This history was fetched and merged into local main as 8cb0771 without rewriting either root history. An initial command-line push dry run failed authentication. After the student signed into GitHub Desktop, its Publish branch operation successfully uploaded main and all four feature branches. A subsequent git ls-remote --heads origin confirmed that each remote hash matched its local branch.')
 h2('9.2 Preserved branches and merges')
 table('Preserved implementation history',['Branch','Commit evidence','State'],[
-('main','9f3d709, d129a15, a570cfb','Contains verified product, sale and return merges.'),
+('main','9f3d709, d129a15, a570cfb, 8cb0771','Contains verified implementation and preserved remote initial history.'),
 ('feature/product-management','f716d77; 9f587a0','Preserved and merged with a merge commit.'),
 ('feature/process-sale','5183641','Preserved and merged with a merge commit.'),
 ('feature/handle-returns','a1fb0aa','Preserved and merged with a merge commit.'),
@@ -279,12 +279,13 @@ p('Commit messages describe concrete increments. Product work adds catalog and s
 h2('9.3 Genuine command evidence and remote handoff')
 p('Command journals contain actual commands and exit codes. The first journal includes a failed checkout caused by its own tracked log changing. The active journal was subsequently kept in ignored storage and snapshotted into evidence. A later active-server file-lock failure is also recorded. The branch and graph listings are direct Git output, not reconstructed history.')
 code('git init -b main\ngit switch -c feature/product-management\ngit commit -m "feat: manage products and inventory with validation and stale edit protection"\ngit merge --no-ff feature/product-management ...\ngit switch -c feature/process-sale\ngit merge --no-ff feature/process-sale ...\ngit switch -c feature/handle-returns\ngit merge --no-ff feature/handle-returns ...')
-p('These abbreviated commands summarize executed actions. Full commands and results appear in git-commands.log and git-session-record.log. Once the correct POS repository is confirmed, its remote history must be inspected before attaching origin and pushing main and all preserved feature branches. Any existing history must be integrated without overwriting it. Course reference files, local credentials and temporary working files are excluded from Git.')
+p('These abbreviated commands summarize executed actions. Full commands and results appear in git-commands.log and git-session-record.log. Publishing through GitHub Desktop is documented separately as a UI action, rather than presented as a terminal push command. The public repository was opened successfully with HTTP 200, and its screenshot was captured after the initial publication. Subsequent documentation commits and their merge are recorded in the final delivery log. Course references, local credentials, temporary files and personalized submission binaries are excluded from the public source repository.')
+fig('15-github-repository.png','Genuine GitHub repository after publication of implementation checkpoint 8cb0771. Final delivery records include later documentation updates.',max_height=4.2)
 
 h1('Chapter 10 Conclusion')
 p('The application supports both required use cases with catalog management, exact cash calculations, receipts, transaction records, validated refunds and consistent inventory updates. Business concepts map to focused Java entities, transactional services and explicit persistence queries. Actual tests demonstrate normal, invalid and contested operations on H2 and real MySQL; browser and SQL evidence confirms the running system’s behavior.')
 p('Incremental work exposed failures at manageable stages. Product rules were verified before checkout, and checkout before refunds and concurrent access. Dated records and retained failures support a defensible account of this work. Progress measurements cover one session, so they do not establish multi-day Scrum velocity or earlier sprint performance.')
-p('Limitations include trusted local deployment, no authentication, no separate tax/discount or card subsystem, and a simple policy returning accepted goods to stock. Future work can add roles, damaged-goods handling, deadlines, pagination, migration-controlled schema changes and hardware receipt support. Immediate coursework actions are to confirm the POS remote, push the preserved history, prepare and review the presentation/video, upload the genuine demonstration and replace the pending project/video links before submission.')
+p('Limitations include trusted local deployment, no authentication, no separate tax/discount or card subsystem, and a simple policy returning accepted goods to stock. Future work can add roles, damaged-goods handling, deadlines, pagination, migration-controlled schema changes and hardware receipt support. The verified application and preserved branches have been published to GitHub. Remaining coursework submission work is to prepare and review the presentation/video, upload the genuine demonstration and replace the pending video link before submission.')
 
 h1('Appendix A Source and Evidence Index')
 p('Authoritative specification: references/Software Engineering Practice Assignment.docx. Cover basis: references/Tech Report Cover Page (3).docx. Conceptual reference: Craig Larman, Applying UML and Patterns, third edition, especially chapters 6, 9, 10, 13, 15, 17, 19, 21 and 26. The previous robot report informed organization and, at the student’s explicit direction, identity fields. Its project results, dates, Git commands and progress are not POS evidence.')
@@ -299,6 +300,7 @@ table('Submission and evidence files',['Location','Contents'],[
 ('deliverables/quizzes','Both quizzes in Word/PDF and question-to-source mapping.'),
 ('report_evidence_checklist.md','Verification checks and outstanding external submission items.')],[2.05,3.718])
 h2('A.1 Actual implementation excerpts')
+doc.paragraphs[-1].paragraph_format.page_break_before=True
 p('The following excerpts are taken from the implementation; surrounding statements are omitted for clarity.')
 code('''// SaleService.checkout
 if (cash.compareTo(sale.getTotal()) < 0)
@@ -312,7 +314,7 @@ product.restoreStock(quantity);
 item.recordReturn(quantity);
 return returns.saveAndFlush(new ReturnRecord(requestKey, item, quantity, reason));''')
 h2('A.2 Demonstration and external submission fields')
-p('POS repository URL: https://github.com/0ShaoYifei/ProjectPos_2026. Demonstration video URL: [Pending upload]. Replace these with genuine project-specific links. The earlier project video is not a substitute. A demonstration should combine slides and the working system: a cash sale and change, insufficient stock/payment, a valid refund, excessive-return rejection, database records and Git history. The assignment requires a presentation and Bilibili upload; this report does not claim those external submissions have already occurred.')
+p('POS repository URL: https://github.com/0ShaoYifei/ProjectPos_2026. Demonstration video URL: [Pending upload]. The repository address is confirmed; replace the video placeholder with a genuine uploaded demonstration link. The earlier project video is not a substitute. A demonstration should combine slides and the working system: a cash sale and change, insufficient stock/payment, a valid refund, excessive-return rejection, database records and Git history. The assignment requires a presentation and Bilibili upload; this report does not claim those external submissions have already occurred.')
 output=root/'POS_Technical_Report.docx';doc.core_properties.title='Analysis and Design of a PoS System';doc.core_properties.author=identity['name'];doc.save(output)
 allowed={'word/document.xml','word/styles.xml','word/settings.xml','word/_rels/document.xml.rels','[Content_Types].xml','docProps/core.xml','docProps/app.xml'}
 with ZipFile(output) as z:parts={n:z.read(n) for n in z.namelist()}

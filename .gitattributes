@@ -1,2 +1,4 @@
 /mvnw text eol=lf
 *.cmd text eol=crlf
+# Preserve raw command output, including Git graph padding.
+docs/evidence/*.log -whitespace
