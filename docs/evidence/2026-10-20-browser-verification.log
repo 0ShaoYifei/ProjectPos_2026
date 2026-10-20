@@ -1,0 +1,13 @@
+PASS Products page renders
+PASS Invalid product form rejected
+PASS Insufficient stock blocked in live cart
+PASS Multi-item running total
+PASS Insufficient cash rejected in live checkout
+PASS Cash sale receipt and change
+PASS Excessive return rejected in live form
+PASS Valid partial refund and refund ledger
+PASS Repeated refund request remains single record
+PASS Inventory reflects sale and return
+PASS Transaction lookup opens saved receipt
+PASS Missing CSRF token blocked
+PASS Unknown receipt and malformed input handled

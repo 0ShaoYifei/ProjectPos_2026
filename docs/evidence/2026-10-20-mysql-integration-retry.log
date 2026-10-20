@@ -1,0 +1,108 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.example:ProjectPos_2026 >---------------------
+[INFO] Building ProjectPos_2026 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.5.0:resources (default-resources) @ ProjectPos_2026 ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 9 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.15.0:compile (default-compile) @ ProjectPos_2026 ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.5.0:testResources (default-testResources) @ ProjectPos_2026 ---
+[INFO] Copying 2 resources from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.15.0:testCompile (default-testCompile) @ ProjectPos_2026 ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.5.6:test (default-test) @ ProjectPos_2026 ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.projectpos_2026.ProjectPos2026ApplicationTests
+19:21:02.953 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.projectpos_2026.ProjectPos2026ApplicationTests]: ProjectPos2026ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+19:21:03.090 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.projectpos_2026.ProjectPos2026Application for test class com.example.projectpos_2026.ProjectPos2026ApplicationTests
+19:21:03.218 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.projectpos_2026.ProjectPos2026ApplicationTests]: ProjectPos2026ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+19:21:03.219 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.projectpos_2026.ProjectPos2026Application for test class com.example.projectpos_2026.ProjectPos2026ApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-20T19:21:03.698+08:00  INFO 37464 --- [           main] c.e.p.ProjectPos2026ApplicationTests     : Starting ProjectPos2026ApplicationTests using Java 21 with PID 37464 (started by ASUS in C:\Users\ASUS\IdeaProjects\ProjectPos_2026)
+2026-10-20T19:21:03.700+08:00  INFO 37464 --- [           main] c.e.p.ProjectPos2026ApplicationTests     : The following 1 profile is active: "mysql-test"
+2026-10-20T19:21:04.555+08:00  INFO 37464 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-20T19:21:04.651+08:00  INFO 37464 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 4 JPA repository interfaces.
+2026-10-20T19:21:06.535+08:00  INFO 37464 --- [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-20T19:21:06.901+08:00  INFO 37464 --- [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-20T19:21:08.584+08:00  INFO 37464 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-20T19:21:08.676+08:00  INFO 37464 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-20T19:21:09.561+08:00  INFO 37464 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@746e534
+2026-10-20T19:21:09.565+08:00  INFO 37464 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-20T19:21:09.844+08:00  INFO 37464 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/pos_2026_test_db?serverTimezone=Asia/Shanghai]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: pos_2026_test_db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-20T19:21:12.590+08:00  INFO 37464 --- [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-20T19:21:14.003+08:00  INFO 37464 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-20T19:21:14.219+08:00  INFO 37464 --- [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-20T19:21:18.075+08:00  INFO 37464 --- [           main] c.e.p.ProjectPos2026ApplicationTests     : Started ProjectPos2026ApplicationTests in 14.768 seconds (process running for 16.391)
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (C:\Users\ASUS\.m2\repository\net\bytebuddy\byte-buddy-agent\1.18.11\byte-buddy-agent-1.18.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.15 s -- in com.example.projectpos_2026.ProjectPos2026ApplicationTests
+[INFO] Running com.example.projectpos_2026.service.ConcurrencyTests
+2026-10-20T19:21:18.820+08:00  INFO 37464 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.projectpos_2026.service.ConcurrencyTests]: ConcurrencyTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-20T19:21:18.869+08:00  INFO 37464 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.projectpos_2026.ProjectPos2026Application for test class com.example.projectpos_2026.service.ConcurrencyTests
+2026-10-20T19:21:18.873+08:00  INFO 37464 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.projectpos_2026.service.ConcurrencyTests]: ConcurrencyTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-20T19:21:18.877+08:00  INFO 37464 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.projectpos_2026.ProjectPos2026Application for test class com.example.projectpos_2026.service.ConcurrencyTests
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.226 s -- in com.example.projectpos_2026.service.ConcurrencyTests
+[INFO] Running com.example.projectpos_2026.service.ProductServiceTests
+2026-10-20T19:21:20.055+08:00  INFO 37464 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.projectpos_2026.service.ProductServiceTests]: ProductServiceTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-20T19:21:20.059+08:00  INFO 37464 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.projectpos_2026.ProjectPos2026Application for test class com.example.projectpos_2026.service.ProductServiceTests
+2026-10-20T19:21:20.062+08:00  INFO 37464 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.projectpos_2026.service.ProductServiceTests]: ProductServiceTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-20T19:21:20.067+08:00  INFO 37464 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.projectpos_2026.ProjectPos2026Application for test class com.example.projectpos_2026.service.ProductServiceTests
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.203 s -- in com.example.projectpos_2026.service.ProductServiceTests
+[INFO] Running com.example.projectpos_2026.service.ReturnServiceTests
+2026-10-20T19:21:20.267+08:00  INFO 37464 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.projectpos_2026.service.ReturnServiceTests]: ReturnServiceTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-20T19:21:20.275+08:00  INFO 37464 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.projectpos_2026.ProjectPos2026Application for test class com.example.projectpos_2026.service.ReturnServiceTests
+2026-10-20T19:21:20.281+08:00  INFO 37464 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.projectpos_2026.service.ReturnServiceTests]: ReturnServiceTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-20T19:21:20.283+08:00  INFO 37464 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.projectpos_2026.ProjectPos2026Application for test class com.example.projectpos_2026.service.ReturnServiceTests
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.734 s -- in com.example.projectpos_2026.service.ReturnServiceTests
+[INFO] Running com.example.projectpos_2026.service.SaleServiceTests
+2026-10-20T19:21:21.002+08:00  INFO 37464 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.projectpos_2026.service.SaleServiceTests]: SaleServiceTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-20T19:21:21.005+08:00  INFO 37464 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.projectpos_2026.ProjectPos2026Application for test class com.example.projectpos_2026.service.SaleServiceTests
+2026-10-20T19:21:21.008+08:00  INFO 37464 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.projectpos_2026.service.SaleServiceTests]: SaleServiceTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-20T19:21:21.010+08:00  INFO 37464 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.projectpos_2026.ProjectPos2026Application for test class com.example.projectpos_2026.service.SaleServiceTests
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.477 s -- in com.example.projectpos_2026.service.SaleServiceTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 21, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  22.400 s
+[INFO] Finished at: 2026-10-20T19:21:21+08:00
+[INFO] ------------------------------------------------------------------------

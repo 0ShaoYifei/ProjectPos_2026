@@ -1,0 +1,25 @@
+{
+  "recordedAt": "2026-10-20T11:22:52.214Z",
+  "baseUrl": "http://127.0.0.1:8080",
+  "results": [
+    {
+      "name": "Products page renders",
+      "status": "PASS",
+      "observed": "HTTP 200 and English products heading",
+      "time": "2026-10-20T11:22:20.449Z"
+    },
+    {
+      "name": "Invalid product form rejected",
+      "status": "PASS",
+      "observed": "Invalid barcode, empty name, zero price and negative stock return English form errors",
+      "time": "2026-10-20T11:22:20.797Z"
+    },
+    {
+      "name": "Insufficient stock blocked in live cart",
+      "status": "FAIL",
+      "observed": "TimeoutError: locator.selectOption: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Product', { exact: true })\u001b[22m\n",
+      "time": "2026-10-20T11:22:52.214Z"
+    }
+  ],
+  "pageErrors": []
+}

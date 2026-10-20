@@ -1,0 +1,14 @@
+Tables_in_pos_2026_db
+products
+return_records
+sale_items
+sales
+id	barcode	name	price	stock	active
+1	DEMO-RICE-1KG	Jasmine Rice 1kg	6.50	30	
+2	DEMO-MILK-1L	Fresh Milk 1L	3.80	20	
+3	DEMO-APPLE-500G	Red Apples 500g	4.20	25	
+TABLE_NAME	ENGINE
+products	InnoDB
+return_records	InnoDB
+sale_items	InnoDB
+sales	InnoDB

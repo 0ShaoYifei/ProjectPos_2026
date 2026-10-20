@@ -1,0 +1,19 @@
+{
+  "products": {
+    "DEMO-RICE-1KG": "1",
+    "DEMO-MILK-1L": "2",
+    "DEMO-APPLE-500G": "3"
+  },
+  "saleId": "1",
+  "receiptUrl": "http://127.0.0.1:8080/sales/1",
+  "initialStock": {
+    "rice": 30,
+    "milk": 20,
+    "apples": 25
+  },
+  "finalStock": {
+    "rice": 29,
+    "milk": 19,
+    "apples": 25
+  }
+}

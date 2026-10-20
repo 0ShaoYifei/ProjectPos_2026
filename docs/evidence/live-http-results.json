@@ -1,0 +1,94 @@
+{
+  "recordedAt": "2026-10-20T11:24:21.136Z",
+  "baseUrl": "http://127.0.0.1:8080",
+  "results": [
+    {
+      "name": "Products page renders",
+      "status": "PASS",
+      "observed": "HTTP 200 and English products heading",
+      "time": "2026-10-20T11:24:18.236Z"
+    },
+    {
+      "name": "Invalid product form rejected",
+      "status": "PASS",
+      "observed": "Invalid barcode, empty name, zero price and negative stock return English form errors",
+      "time": "2026-10-20T11:24:18.371Z"
+    },
+    {
+      "name": "Insufficient stock blocked in live cart",
+      "status": "PASS",
+      "observed": "Requested 10000 units; cart rejected the request",
+      "time": "2026-10-20T11:24:18.939Z"
+    },
+    {
+      "name": "Multi-item running total",
+      "status": "PASS",
+      "observed": "2 x 6.50 + 1 x 3.80 = CNY 16.80",
+      "time": "2026-10-20T11:24:19.233Z"
+    },
+    {
+      "name": "Insufficient cash rejected in live checkout",
+      "status": "PASS",
+      "observed": "CNY 16.79 rejected; cart retained",
+      "time": "2026-10-20T11:24:19.498Z"
+    },
+    {
+      "name": "Cash sale receipt and change",
+      "status": "PASS",
+      "observed": {
+        "saleId": "1",
+        "total": "16.80",
+        "cash": "20.00",
+        "change": "3.20"
+      },
+      "time": "2026-10-20T11:24:19.859Z"
+    },
+    {
+      "name": "Excessive return rejected in live form",
+      "status": "PASS",
+      "observed": "Three units rejected against two purchased units",
+      "time": "2026-10-20T11:24:20.145Z"
+    },
+    {
+      "name": "Valid partial refund and refund ledger",
+      "status": "PASS",
+      "observed": {
+        "saleId": "1",
+        "quantity": 1,
+        "refund": "6.50"
+      },
+      "time": "2026-10-20T11:24:20.421Z"
+    },
+    {
+      "name": "Repeated refund request remains single record",
+      "status": "PASS",
+      "observed": "Duplicate request token produced no second refund row",
+      "time": "2026-10-20T11:24:20.582Z"
+    },
+    {
+      "name": "Inventory reflects sale and return",
+      "status": "PASS",
+      "observed": "Rice 30 - 2 + 1 = 29; milk 20 - 1 = 19",
+      "time": "2026-10-20T11:24:20.754Z"
+    },
+    {
+      "name": "Transaction lookup opens saved receipt",
+      "status": "PASS",
+      "observed": "Sale number resolves to persisted receipt",
+      "time": "2026-10-20T11:24:21.058Z"
+    },
+    {
+      "name": "Missing CSRF token blocked",
+      "status": "PASS",
+      "observed": "HTTP 403",
+      "time": "2026-10-20T11:24:21.075Z"
+    },
+    {
+      "name": "Unknown receipt and malformed input handled",
+      "status": "PASS",
+      "observed": "Both requests returned HTTP 400 with English messages",
+      "time": "2026-10-20T11:24:21.128Z"
+    }
+  ],
+  "pageErrors": []
+}

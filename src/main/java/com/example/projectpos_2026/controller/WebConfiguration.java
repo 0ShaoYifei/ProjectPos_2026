@@ -2,6 +2,9 @@ package com.example.projectpos_2026.controller;
 
 import jakarta.servlet.http.*;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.servlet.i18n.FixedLocaleResolver;
+import java.util.Locale;
 import org.springframework.web.servlet.*;
 import org.springframework.web.servlet.config.annotation.*;
 import java.nio.charset.StandardCharsets;
@@ -10,6 +13,7 @@ import java.util.UUID;
 
 @Configuration
 public class WebConfiguration implements WebMvcConfigurer {
+    @Bean public LocaleResolver localeResolver() { return new FixedLocaleResolver(Locale.ENGLISH); }
     @Override public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new HandlerInterceptor() {
             @Override public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
