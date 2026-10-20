@@ -45,7 +45,7 @@ The MySQL test profile uses `pos_2026_test_db`, not the application's `pos_2026_
 - `exception`: shared business exception
 - `src/main/resources/templates`: English Thymeleaf views
 - `docs/evidence`: authentic build logs, SQL verification, screenshots, Git records and measured progress
-- `deliverables`: quiz answers and technical report
+- `deliverables`: quiz answers, technical report, presentation and recording preparation
 
 ## Development and submission evidence
 
@@ -53,4 +53,4 @@ Local Git was initialized only after confirming that no repository existed. Feat
 
 Repository: https://github.com/0ShaoYifei/ProjectPos_2026. GitHub Desktop was used to publish the preserved branches after command-line authentication failed. The initial remote README history remains in the merged graph.
 
-The local `deliverables/quizzes` directory contains both completed quizzes in Word and PDF plus the source map. `deliverables/report` contains the editable report, its 32-page PDF, UML sources/images, measured chart data and evidence checklist. Personalized Word/PDF submission files remain local; the public repository contains their reusable builders, report text and supporting technical evidence. Rebuilding documents requires the student's ignored `.local/student-info.json` and original reference documents. `docs/demo-guide.md` supports the later presentation/video; no uploaded demonstration URL is claimed.
+The local `deliverables/quizzes` directory contains both completed quizzes in Word and PDF plus the source map. `deliverables/report` contains the editable report, its 32-page PDF, UML sources/images, measured chart data and evidence checklist. `deliverables/presentation` contains the 15-slide editable English deck, a matching English script, Chinese project explanation and recording guide, 20 bilingual defense questions, and five actual Office PDF exports. Its README explains the learning and recording sequence. Personalized Office/PDF submission files remain local; the public repository contains their reusable builders, source text and supporting technical evidence. Rebuilding documents requires the student's ignored `.local/student-info.json` and original reference documents. Separate recording products were added without resetting earlier transactions. No video has been recorded or uploaded by these preparation steps; its URL remains pending.

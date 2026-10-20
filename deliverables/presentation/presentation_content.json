@@ -1,0 +1,277 @@
+{
+  "title": "Analysis and Design of a PoS System",
+  "project": "ProjectPos_2026",
+  "videoUrl": "[Pending upload]",
+  "slides": [
+    {
+      "number": 1,
+      "title": "Analysis and Design of a PoS System",
+      "seconds": 18,
+      "keyPoints": [
+        "Individual Software Engineering Practice project",
+        "A supermarket cash checkout and return system"
+      ],
+      "narration": "Hello, I am Yifei Shao. My project is a supermarket point-of-sale system for cash sales and returns. I will explain its design, then demonstrate a sale and refund in the working application. First, here are the project objectives.",
+      "actions": "Show slide 1. Keep the POS browser open in the background.",
+      "transition": "Move to the project objectives.",
+      "sources": [
+        "README.md",
+        "src/main/java/com/example/projectpos_2026"
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Project objectives",
+      "seconds": 18,
+      "keyPoints": [
+        "Consistent stock and financial records",
+        "Clear English forms and receipts",
+        "A design that can be explained and tested"
+      ],
+      "narration": "The main objective is consistent stock and transaction records. A completed sale reduces inventory and produces a receipt. An accepted return restores stock and records a refund. English forms and clear errors help the cashier complete these tasks. These objectives define the requirements.",
+      "actions": "Point to the sale and return outcomes.",
+      "transition": "Introduce the validation rules.",
+      "sources": [
+        "src/main/java/com/example/projectpos_2026/service/SaleService.java",
+        "src/main/java/com/example/projectpos_2026/service/ReturnService.java"
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Functional requirements",
+      "seconds": 20,
+      "keyPoints": [
+        "Manage products and stock",
+        "Take sufficient cash and calculate change",
+        "Limit returns to the remaining purchased quantity"
+      ],
+      "narration": "The cashier maintains products, builds a cart, accepts cash and reviews receipts. The system rejects insufficient stock and payment. Returns require an original purchased line and cannot exceed its remaining returnable quantity. Refunds use the original sale price. Next is the development process.",
+      "actions": "Briefly point to the safeguards in the requirements table.",
+      "transition": "Explain the observed development increments.",
+      "sources": [
+        "src/main/java/com/example/projectpos_2026/controller/ProductForm.java",
+        "src/main/java/com/example/projectpos_2026/service/SaleService.java",
+        "src/main/java/com/example/projectpos_2026/service/ReturnService.java"
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Agile development process",
+      "seconds": 23,
+      "keyPoints": [
+        "Product increment before sale and return increments",
+        "Executable tests supplied feedback",
+        "Individual work with retained failures"
+      ],
+      "narration": "I used an individual adaptation of Scrum. Products, sales, returns and integration formed separate increments. Tests supplied feedback, and the records retain failed attempts and corrections. These increments occurred in one recorded session, so they are not completed multi-day sprints. The backlog organized the work.",
+      "actions": "Follow the increment table from products to integration.",
+      "transition": "Show the backlog and proposed review timeboxes.",
+      "sources": [
+        "docs/evidence/development-log.md",
+        "docs/evidence/progress.csv",
+        "docs/evidence/2026-10-20-products-final-test.log",
+        "docs/evidence/2026-10-20-sales-test.log"
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Backlog and sprint planning",
+      "seconds": 23,
+      "keyPoints": [
+        "18 verified items in the original backlog",
+        "Must-priority business and verification work",
+        "Three-day review timeboxes remain proposed"
+      ],
+      "narration": "The original backlog contains eighteen items covering business functions, verification and documentation. These items now have verification records. The assignment allows short sprints. The three-day windows shown here are a proposed review plan. The next slide shows the progress that was actually measured.",
+      "actions": "Point to backlog groups and the separate proposed dates.",
+      "transition": "Explain the chart's units and limited period.",
+      "sources": [
+        "docs/product-backlog.csv",
+        "deliverables/report/POS_Technical_Report.md",
+        "references/Software Engineering Practice Assignment.docx"
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Recorded burndown",
+      "seconds": 23,
+      "keyPoints": [
+        "Real checkpoints on 20 October 2026",
+        "Remaining original backlog items fell from 18 to 0",
+        "Items are counts, not hours or story points"
+      ],
+      "narration": "The chart uses real checkpoints on the twentieth of October. It counts remaining original backlog items against elapsed minutes. The count falls from eighteen to zero after verification. Items have different effort, and the connecting lines do not establish unmeasured completion times. Next is the use case model.",
+      "actions": "Point to the first and last measured points. Do not describe the line as a multi-day sprint history.",
+      "transition": "Introduce the cashier and the two required use cases.",
+      "sources": [
+        "docs/evidence/progress.csv"
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Use case model",
+      "seconds": 20,
+      "keyPoints": [
+        "Cashier directly operates the application",
+        "Process Sale and Handle Returns are the core use cases",
+        "Product management and transaction review support them"
+      ],
+      "narration": "The cashier directly operates the software. Process Sale and Handle Returns are the core use cases. Products and transaction review support them. The customer supplies goods, cash or a receipt. The report also includes system sequence diagrams of these interactions. Next is the internal architecture.",
+      "actions": "Point to the cashier and the two core use cases.",
+      "transition": "Explain the responsibility of each layer.",
+      "sources": [
+        "deliverables/report/report_assets/01-use-cases.puml",
+        "deliverables/report/report_assets/02-ssd-process-sale.puml",
+        "deliverables/report/report_assets/03-ssd-handle-returns.puml"
+      ]
+    },
+    {
+      "number": 8,
+      "title": "MVC layered architecture",
+      "seconds": 28,
+      "keyPoints": [
+        "Thymeleaf renders English pages",
+        "Controllers manage requests and page flow",
+        "Services coordinate transactions; repositories access data"
+      ],
+      "narration": "Thymeleaf renders the pages. Controllers receive requests and delegate business work to services. Services validate operations and define transaction boundaries. Repositories query and lock records through Spring Data JPA. Entities hold state and domain rules. This separation makes business behavior easier to test. The domain model explains these objects.",
+      "actions": "Follow the request path and point to the entity relationships.",
+      "transition": "Explain Sale, SaleItem, Product and ReturnRecord.",
+      "sources": [
+        "src/main/java/com/example/projectpos_2026/controller",
+        "src/main/java/com/example/projectpos_2026/service",
+        "src/main/java/com/example/projectpos_2026/repository",
+        "src/main/java/com/example/projectpos_2026/entity"
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Domain model and object design",
+      "seconds": 28,
+      "keyPoints": [
+        "Sale contains purchased SaleItems",
+        "SaleItem stores original name and price",
+        "ReturnRecord refers to one purchased line"
+      ],
+      "narration": "The main concepts are Product, Sale, SaleItem and ReturnRecord. A sale contains purchased lines. Each line keeps the original product name and price, so catalog edits cannot rewrite receipts. Sale calculates totals, while SaleItem calculates its subtotal and remaining returnable quantity. The database preserves these relationships.",
+      "actions": "Trace the three associations and multiplicities. Explain that the slide shows conceptual attributes; the report contains detailed design classes.",
+      "transition": "Map the entities to the four database tables.",
+      "sources": [
+        "src/main/java/com/example/projectpos_2026/entity",
+        "deliverables/report/report_assets/04-domain-model.puml",
+        "deliverables/report/report_assets/08-design-entities.puml"
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Database design",
+      "seconds": 25,
+      "keyPoints": [
+        "Four real InnoDB tables in pos_2026_db",
+        "Foreign keys link purchases and refunds",
+        "Transactions commit stock and records together"
+      ],
+      "narration": "Four MySQL tables store these entities. Sale items link sales to products; return records link to purchased lines. JPA maps these links to foreign keys. Transactions commit stock changes and records together. Row locks protect contested quantities. I will now demonstrate a sale.",
+      "actions": "Show the table relationships. Switch to the POS browser for slide 11.",
+      "transition": "Begin the live sale demonstration.",
+      "sources": [
+        "docs/evidence/2026-10-20-database-final-verification.log",
+        "src/main/java/com/example/projectpos_2026/entity",
+        "src/main/java/com/example/projectpos_2026/service/SaleService.java",
+        "src/main/java/com/example/projectpos_2026/service/ReturnService.java"
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Process Sale demonstration",
+      "seconds": 80,
+      "keyPoints": [
+        "2 rice at 6.50 plus 1 milk at 3.80 totals 16.80",
+        "20.00 cash gives 3.20 change",
+        "Fresh recording stock changes from 10/10 to 8/9"
+      ],
+      "narration": "I am using separate recording products, each starting with ten units. I add two rice units and one milk unit. The total is sixteen yuan and eighty fen. First, I enter sixteen yuan and seventy-nine fen. The system rejects insufficient payment and keeps the cart. I then enter twenty yuan and complete the sale. The saved receipt shows three yuan and twenty fen in change. The rice stock is now eight and the milk stock is nine. The screenshot on the slide is the earlier verified example; this live sale has its own receipt number. Next, I will return one rice unit.",
+      "actions": "Show the slide briefly, then the browser. Confirm the two REC-20261020 products each show stock 10. New sale: add rice quantity 2 and milk quantity 1. Submit cash 16.79, then 20.00. Show the new receipt and Print receipt button without opening the print dialog. Show Products stock 8/9; return to the same receipt using its recorded sale number.",
+      "transition": "Continue with the same newly created receipt.",
+      "sources": [
+        "docs/evidence/screenshots/05-paid-receipt.png",
+        "docs/evidence/phase4-recording-data.json",
+        "src/main/resources/templates/sale-form.html",
+        "src/main/resources/templates/receipt.html"
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Handle Returns demonstration",
+      "seconds": 65,
+      "keyPoints": [
+        "Excessive return of 3 units fails",
+        "Return 1 rice unit for a 6.50 refund",
+        "Recording stock then becomes 9/9"
+      ],
+      "narration": "I open the same new receipt and select the purchased rice line. A request to return three units fails because only two were purchased. I then return one unit and enter a reason. The refund is six yuan and fifty fen, using the original unit price. The refund ledger records the return, and the rice stock becomes nine. One rice unit remains returnable on this receipt. I will now summarize the executed tests.",
+      "actions": "On the new receipt select Recording Rice 1kg. Enter quantity 3 and a reason; show the rejection. Change quantity to 1 and submit. Show the refund message and refund ledger. Open Products and confirm stock 9/9. Return to the slides.",
+      "transition": "Summarize the actual verification evidence.",
+      "sources": [
+        "docs/evidence/screenshots/07-return-refund.png",
+        "docs/evidence/phase4-recording-data.json",
+        "docs/evidence/live-http-results.json",
+        "src/main/java/com/example/projectpos_2026/service/ReturnService.java"
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Testing results",
+      "seconds": 30,
+      "keyPoints": [
+        "21 automated tests pass on H2 and independently on MySQL",
+        "13 actual browser checks pass",
+        "clean package produces a runnable JAR"
+      ],
+      "narration": "The same twenty-one tests passed on H2 and independently on MySQL, with zero failures, errors or skips. They cover invalid transactions, historical prices, duplicates and two-thread stock conflicts. Thirteen browser checks passed, and clean package produced a runnable application. The logs retain failures and corrected runs. Next is version control.",
+      "actions": "Show the results table. If time allows, show the final BUILD SUCCESS lines from the stored log.",
+      "transition": "Show the genuine repository history.",
+      "sources": [
+        "docs/evidence/2026-10-20-returns-test.log",
+        "docs/evidence/2026-10-20-mysql-integration-retry.log",
+        "docs/evidence/2026-10-20-clean-package.log",
+        "docs/evidence/live-http-results.json"
+      ]
+    },
+    {
+      "number": 14,
+      "title": "GitHub version control",
+      "seconds": 27,
+      "keyPoints": [
+        "Individual development with meaningful commits",
+        "Preserved feature branches and merge commits",
+        "Remote main and documentation hashes verified"
+      ],
+      "narration": "The repository preserves feature branches and merge commits for products, sales, returns and documentation. The initial remote README history remains intact. GitHub Desktop published the branches after command-line authentication failed. Here I can show the actual main history and branch list. This is individual development. Finally, the conclusion.",
+      "actions": "Switch briefly to the actual GitHub repository. Show main commits and the preserved branch list. The Phase 4 branch is additional local documentation work until it is published. Return to slide 15.",
+      "transition": "Conclude with achieved functions and remaining limitations.",
+      "sources": [
+        "docs/evidence/github-connection.md",
+        "docs/evidence/git-session-record.log",
+        "https://github.com/0ShaoYifei/ProjectPos_2026"
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Conclusion",
+      "seconds": 22,
+      "keyPoints": [
+        "The two required business use cases work",
+        "Transactions protect stock and refund consistency",
+        "Roles, damaged goods and hardware printing remain future work"
+      ],
+      "narration": "The project implements both required use cases with consistent inventory, exact cash calculations and auditable records. Its layered design connects use cases to code and tests. Current limits include trusted local access and no card-payment or damaged-goods workflow. Roles and hardware printing are future improvements. Thank you.",
+      "actions": "Show the final slide. Stop the recording, review the video, and upload it only after review. Replace the pending URL with the actual published link later.",
+      "transition": "End the presentation.",
+      "sources": [
+        "README.md",
+        "deliverables/report/POS_Technical_Report.md"
+      ]
+    }
+  ]
+}

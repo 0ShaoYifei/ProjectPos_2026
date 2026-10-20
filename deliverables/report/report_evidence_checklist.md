@@ -25,7 +25,7 @@ The final PDF page inventory, preserved template parts and visual verification o
 
 ## External submission items still required
 
-- Prepare and review the course PowerPoint and genuine demonstration video. The requested current phases prepare the application, quizzes and report; they do not establish a completed video presentation.
+- Phase 4 supplement: the 15-slide English PowerPoint, matching English script, Chinese project explanation, Chinese recording guide and 20 bilingual defense questions are complete in `deliverables/presentation`. All five PDF exports and actual Office page previews were inspected; see `docs/evidence/phase4-final-verification.json`. Recording and uploading the genuine demonstration video remain outstanding.
 - Upload the real presentation/demo to Bilibili and supply its genuine URL. The report cover and appendix explicitly contain `[Pending upload]` until then.
 - Student review and course submission remain the student's actions. No unrecorded user acceptance, submission or upload is claimed.
 

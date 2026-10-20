@@ -1,0 +1,8 @@
+{
+  "recorded_at": "2026-10-20T14:58:33.559238+00:00",
+  "staged_files_checked": 27,
+  "commits_checked": 14,
+  "known_database_password_present": false,
+  "private_reference_and_personalized_files_staged": false,
+  "scope": "Known database password scan in every commit and staged file; filename exclusions. This is not a comprehensive secret-scanner certification."
+}
