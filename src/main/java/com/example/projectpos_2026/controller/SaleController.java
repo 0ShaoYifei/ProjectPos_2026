@@ -15,7 +15,8 @@ import java.util.UUID;
 public class SaleController {
     private final ProductService products;
     private final SaleService sales;
-    public SaleController(ProductService products, SaleService sales) { this.products = products; this.sales = sales; }
+    private final ReturnService returns;
+    public SaleController(ProductService products, SaleService sales, ReturnService returns) { this.products = products; this.sales = sales; this.returns = returns; }
     private ShoppingCart cart(HttpSession session) {
         synchronized (session) {
             ShoppingCart cart = (ShoppingCart) session.getAttribute("cart");
@@ -55,6 +56,7 @@ public class SaleController {
     @GetMapping("/sales") public String list(Model model) { model.addAttribute("sales", sales.all()); return "sales"; }
     @GetMapping("/sales/lookup") public String lookup(@RequestParam Long id) { sales.get(id); return "redirect:/sales/" + id; }
     @GetMapping("/sales/{id}") public String receipt(@PathVariable Long id, Model model) {
-        model.addAttribute("sale", sales.get(id)); model.addAttribute("returnKey", UUID.randomUUID().toString()); return "receipt";
+        model.addAttribute("sale", sales.get(id)); model.addAttribute("returnKey", UUID.randomUUID().toString());
+        model.addAttribute("returns", returns.forSale(id)); return "receipt";
     }
 }

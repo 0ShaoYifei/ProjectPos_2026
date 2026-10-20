@@ -1,0 +1,12 @@
+PASS Products page renders
+PASS Invalid product form rejected
+locator.selectOption: Timeout 30000ms exceeded.
+Call log:
+  - waiting for getByLabel('Product', { exact: true })
+
+    at C:\Users\ASUS\IdeaProjects\ProjectPos_2026\scripts\verify-live.cjs:19:112
+    at check (C:\Users\ASUS\IdeaProjects\ProjectPos_2026\scripts\verify-live.cjs:9:55)
+    at C:\Users\ASUS\IdeaProjects\ProjectPos_2026\scripts\verify-live.cjs:19:8 {
+  log: [ "  - waiting for getByLabel('Product', { exact: true })" ],
+  name: 'TimeoutError'
+}
