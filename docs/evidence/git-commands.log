@@ -1,2 +1,46 @@
 
 [2026-10-20T19:13:33.0735966+08:00] git add src pom.xml .mvn docs scripts .gitignore
+warning: in the working copy of '.mvn/wrapper/maven-wrapper.properties', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/evidence/development-log.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'pom.xml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/evidence/git-commands.log', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'scripts/git-record.ps1', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/resources/templates/fragments.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/resources/templates/product-form.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/resources/templates/products.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/test/resources/application-mysql-test.properties', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/test/resources/application.properties', LF will be replaced by CRLF the next time Git touches it
+exit=0
+
+[2026-10-20T19:13:33.3273745+08:00] git commit -m feat: manage products and inventory with validation and stale edit protection
+[feature/product-management f716d77] feat: manage products and inventory with validation and stale edit protection
+ 25 files changed, 1980 insertions(+), 1 deletion(-)
+ create mode 100644 docs/evidence/2026-10-20-products-final-test.log
+ create mode 100644 docs/evidence/2026-10-20-products-test.log
+ create mode 100644 docs/evidence/git-commands.log
+ create mode 100644 docs/evidence/pdf-page-inventory.csv
+ create mode 100644 scripts/git-record.ps1
+ create mode 100644 src/main/java/com/example/projectpos_2026/controller/ProductController.java
+ create mode 100644 src/main/java/com/example/projectpos_2026/controller/ProductForm.java
+ create mode 100644 src/main/java/com/example/projectpos_2026/controller/WebConfiguration.java
+ create mode 100644 src/main/java/com/example/projectpos_2026/controller/WebErrors.java
+ create mode 100644 src/main/java/com/example/projectpos_2026/entity/Product.java
+ create mode 100644 src/main/java/com/example/projectpos_2026/exception/BusinessException.java
+ create mode 100644 src/main/java/com/example/projectpos_2026/repository/ProductRepository.java
+ create mode 100644 src/main/java/com/example/projectpos_2026/service/ProductService.java
+ create mode 100644 src/main/resources/static/style.css
+ create mode 100644 src/main/resources/templates/error.html
+ create mode 100644 src/main/resources/templates/fragments.html
+ create mode 100644 src/main/resources/templates/product-form.html
+ create mode 100644 src/main/resources/templates/products.html
+ create mode 100644 src/test/java/com/example/projectpos_2026/service/ProductServiceTests.java
+ create mode 100644 src/test/resources/application-mysql-test.properties
+ create mode 100644 src/test/resources/application.properties
+exit=0
+
+[2026-10-20T19:13:34.3361098+08:00] git switch main
+error: Your local changes to the following files would be overwritten by checkout:
+	docs/evidence/git-commands.log
+Please commit your changes or stash them before you switch branches.
+Aborting
+exit=1
