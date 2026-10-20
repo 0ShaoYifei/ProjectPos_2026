@@ -1,0 +1,611 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.example:ProjectPos_2026 >---------------------
+[INFO] Building ProjectPos_2026 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/com/h2database/h2/2.4.240/h2-2.4.240.pom
+Progress (1): 1.1 kB
+                    
+Downloaded from central: https://repo.maven.apache.org/maven2/com/h2database/h2/2.4.240/h2-2.4.240.pom (1.1 kB at 732 B/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/h2database/h2/2.4.240/h2-2.4.240.jar
+Progress (1): 0/2.7 MB
+Progress (1): 0/2.7 MB
+Progress (1): 0/2.7 MB
+Progress (1): 0.1/2.7 MB
+Progress (1): 0.1/2.7 MB
+Progress (1): 0.1/2.7 MB
+Progress (1): 0.1/2.7 MB
+Progress (1): 0.1/2.7 MB
+Progress (1): 0.1/2.7 MB
+Progress (1): 0.1/2.7 MB
+Progress (1): 0.1/2.7 MB
+Progress (1): 0.2/2.7 MB
+Progress (1): 0.2/2.7 MB
+Progress (1): 0.2/2.7 MB
+Progress (1): 0.2/2.7 MB
+Progress (1): 0.2/2.7 MB
+Progress (1): 0.2/2.7 MB
+Progress (1): 0.2/2.7 MB
+Progress (1): 0.3/2.7 MB
+Progress (1): 0.3/2.7 MB
+Progress (1): 0.3/2.7 MB
+Progress (1): 0.3/2.7 MB
+Progress (1): 0.3/2.7 MB
+Progress (1): 0.3/2.7 MB
+Progress (1): 0.4/2.7 MB
+Progress (1): 0.4/2.7 MB
+Progress (1): 0.4/2.7 MB
+Progress (1): 0.4/2.7 MB
+Progress (1): 0.4/2.7 MB
+Progress (1): 0.4/2.7 MB
+Progress (1): 0.5/2.7 MB
+Progress (1): 0.5/2.7 MB
+Progress (1): 0.5/2.7 MB
+Progress (1): 0.5/2.7 MB
+Progress (1): 0.5/2.7 MB
+Progress (1): 0.5/2.7 MB
+Progress (1): 0.6/2.7 MB
+Progress (1): 0.6/2.7 MB
+Progress (1): 0.6/2.7 MB
+Progress (1): 0.6/2.7 MB
+Progress (1): 0.6/2.7 MB
+Progress (1): 0.6/2.7 MB
+Progress (1): 0.7/2.7 MB
+Progress (1): 0.7/2.7 MB
+Progress (1): 0.7/2.7 MB
+Progress (1): 0.7/2.7 MB
+Progress (1): 0.7/2.7 MB
+Progress (1): 0.7/2.7 MB
+Progress (1): 0.7/2.7 MB
+Progress (1): 0.8/2.7 MB
+Progress (1): 0.8/2.7 MB
+Progress (1): 0.8/2.7 MB
+Progress (1): 0.8/2.7 MB
+Progress (1): 0.8/2.7 MB
+Progress (1): 0.8/2.7 MB
+Progress (1): 0.9/2.7 MB
+Progress (1): 0.9/2.7 MB
+Progress (1): 0.9/2.7 MB
+Progress (1): 0.9/2.7 MB
+Progress (1): 0.9/2.7 MB
+Progress (1): 0.9/2.7 MB
+Progress (1): 1.0/2.7 MB
+Progress (1): 1.0/2.7 MB
+Progress (1): 1.0/2.7 MB
+Progress (1): 1.0/2.7 MB
+Progress (1): 1.0/2.7 MB
+Progress (1): 1.0/2.7 MB
+Progress (1): 1.1/2.7 MB
+Progress (1): 1.1/2.7 MB
+Progress (1): 1.1/2.7 MB
+Progress (1): 1.1/2.7 MB
+Progress (1): 1.1/2.7 MB
+Progress (1): 1.1/2.7 MB
+Progress (1): 1.2/2.7 MB
+Progress (1): 1.2/2.7 MB
+Progress (1): 1.2/2.7 MB
+Progress (1): 1.2/2.7 MB
+Progress (1): 1.2/2.7 MB
+Progress (1): 1.2/2.7 MB
+Progress (1): 1.3/2.7 MB
+Progress (1): 1.3/2.7 MB
+Progress (1): 1.3/2.7 MB
+Progress (1): 1.3/2.7 MB
+Progress (1): 1.3/2.7 MB
+Progress (1): 1.3/2.7 MB
+Progress (1): 1.4/2.7 MB
+Progress (1): 1.4/2.7 MB
+Progress (1): 1.4/2.7 MB
+Progress (1): 1.4/2.7 MB
+Progress (1): 1.4/2.7 MB
+Progress (1): 1.4/2.7 MB
+Progress (1): 1.5/2.7 MB
+Progress (1): 1.5/2.7 MB
+Progress (1): 1.5/2.7 MB
+Progress (1): 1.5/2.7 MB
+Progress (1): 1.5/2.7 MB
+Progress (1): 1.5/2.7 MB
+Progress (1): 1.6/2.7 MB
+Progress (1): 1.6/2.7 MB
+Progress (1): 1.6/2.7 MB
+Progress (1): 1.6/2.7 MB
+Progress (1): 1.6/2.7 MB
+Progress (1): 1.6/2.7 MB
+Progress (1): 1.6/2.7 MB
+Progress (1): 1.7/2.7 MB
+Progress (1): 1.7/2.7 MB
+Progress (1): 1.7/2.7 MB
+Progress (1): 1.7/2.7 MB
+Progress (1): 1.7/2.7 MB
+Progress (1): 1.7/2.7 MB
+Progress (1): 1.8/2.7 MB
+Progress (1): 1.8/2.7 MB
+Progress (1): 1.8/2.7 MB
+Progress (1): 1.8/2.7 MB
+Progress (1): 1.8/2.7 MB
+Progress (1): 1.8/2.7 MB
+Progress (1): 1.9/2.7 MB
+Progress (1): 1.9/2.7 MB
+Progress (1): 1.9/2.7 MB
+Progress (1): 1.9/2.7 MB
+Progress (1): 1.9/2.7 MB
+Progress (1): 1.9/2.7 MB
+Progress (1): 2.0/2.7 MB
+Progress (1): 2.0/2.7 MB
+Progress (1): 2.0/2.7 MB
+Progress (1): 2.0/2.7 MB
+Progress (1): 2.0/2.7 MB
+Progress (1): 2.0/2.7 MB
+Progress (1): 2.1/2.7 MB
+Progress (1): 2.1/2.7 MB
+Progress (1): 2.1/2.7 MB
+Progress (1): 2.1/2.7 MB
+Progress (1): 2.1/2.7 MB
+Progress (1): 2.1/2.7 MB
+Progress (1): 2.2/2.7 MB
+Progress (1): 2.2/2.7 MB
+Progress (1): 2.2/2.7 MB
+Progress (1): 2.2/2.7 MB
+Progress (1): 2.2/2.7 MB
+Progress (1): 2.2/2.7 MB
+Progress (1): 2.3/2.7 MB
+Progress (1): 2.3/2.7 MB
+Progress (1): 2.3/2.7 MB
+Progress (1): 2.3/2.7 MB
+Progress (1): 2.3/2.7 MB
+Progress (1): 2.3/2.7 MB
+Progress (1): 2.4/2.7 MB
+Progress (1): 2.4/2.7 MB
+Progress (1): 2.4/2.7 MB
+Progress (1): 2.4/2.7 MB
+Progress (1): 2.4/2.7 MB
+Progress (1): 2.4/2.7 MB
+Progress (1): 2.5/2.7 MB
+Progress (1): 2.5/2.7 MB
+Progress (1): 2.5/2.7 MB
+Progress (1): 2.5/2.7 MB
+Progress (1): 2.5/2.7 MB
+Progress (1): 2.5/2.7 MB
+Progress (1): 2.6/2.7 MB
+Progress (1): 2.6/2.7 MB
+Progress (1): 2.6/2.7 MB
+Progress (1): 2.6/2.7 MB
+Progress (1): 2.6/2.7 MB
+Progress (1): 2.6/2.7 MB
+Progress (1): 2.6/2.7 MB
+Progress (1): 2.7/2.7 MB
+Progress (1): 2.7/2.7 MB
+Progress (1): 2.7 MB    
+                    
+Downloaded from central: https://repo.maven.apache.org/maven2/com/h2database/h2/2.4.240/h2-2.4.240.jar (2.7 MB at 910 kB/s)
+[INFO] 
+[INFO] --- maven-clean-plugin:3.5.0:clean (default-clean) @ ProjectPos_2026 ---
+[INFO] Deleting C:\Users\ASUS\IdeaProjects\ProjectPos_2026\target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.5.0:resources (default-resources) @ ProjectPos_2026 ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 5 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.15.0:compile (default-compile) @ ProjectPos_2026 ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 9 source files with javac [debug parameters release 17] to target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.5.0:testResources (default-testResources) @ ProjectPos_2026 ---
+[INFO] Copying 2 resources from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.15.0:testCompile (default-testCompile) @ ProjectPos_2026 ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 2 source files with javac [debug parameters release 17] to target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.5.6:test (default-test) @ ProjectPos_2026 ---
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.1/plexus-utils-1.1.jar
+Progress (1): 4.1/169 kB
+Progress (1): 7.4/169 kB
+Progress (1): 11/169 kB 
+Progress (1): 16/169 kB
+Progress (1): 20/169 kB
+Progress (1): 24/169 kB
+Progress (1): 28/169 kB
+Progress (1): 32/169 kB
+Progress (1): 36/169 kB
+Progress (1): 40/169 kB
+Progress (1): 44/169 kB
+Progress (1): 48/169 kB
+Progress (1): 52/169 kB
+Progress (1): 57/169 kB
+Progress (1): 61/169 kB
+Progress (1): 65/169 kB
+Progress (1): 69/169 kB
+Progress (1): 73/169 kB
+Progress (1): 77/169 kB
+Progress (1): 81/169 kB
+Progress (1): 85/169 kB
+Progress (1): 89/169 kB
+Progress (1): 93/169 kB
+Progress (1): 97/169 kB
+Progress (1): 102/169 kB
+Progress (1): 106/169 kB
+Progress (1): 110/169 kB
+Progress (1): 114/169 kB
+Progress (1): 118/169 kB
+Progress (1): 122/169 kB
+Progress (1): 126/169 kB
+Progress (1): 130/169 kB
+Progress (1): 134/169 kB
+Progress (1): 138/169 kB
+Progress (1): 143/169 kB
+Progress (1): 147/169 kB
+Progress (1): 151/169 kB
+Progress (1): 155/169 kB
+Progress (1): 159/169 kB
+Progress (1): 163/169 kB
+Progress (1): 167/169 kB
+Progress (1): 169 kB    
+                    
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.1/plexus-utils-1.1.jar (169 kB at 142 kB/s)
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.5.6/surefire-junit-platform-3.5.6.pom
+Progress (1): 4.1 kB
+Progress (1): 5.2 kB
+                    
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.5.6/surefire-junit-platform-3.5.6.pom (5.2 kB at 9.5 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/3.5.6/surefire-providers-3.5.6.pom
+Progress (1): 2.5 kB
+                    
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/3.5.6/surefire-providers-3.5.6.pom (2.5 kB at 4.6 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.5.6/common-java5-3.5.6.pom
+Progress (1): 3.1 kB
+                    
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.5.6/common-java5-3.5.6.pom (3.1 kB at 5.4 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.12.2/junit-platform-engine-1.12.2.pom
+Progress (1): 3.2 kB
+                    
+Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.12.2/junit-platform-engine-1.12.2.pom (3.2 kB at 5.8 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.12.2/junit-platform-commons-1.12.2.pom
+Progress (1): 2.8 kB
+                    
+Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.12.2/junit-platform-commons-1.12.2.pom (2.8 kB at 5.0 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.12.2/junit-platform-launcher-1.12.2.pom
+Progress (1): 3.0 kB
+                    
+Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.12.2/junit-platform-launcher-1.12.2.pom (3.0 kB at 5.5 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.5.6/surefire-junit-platform-3.5.6.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.5.6/common-java5-3.5.6.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.12.2/junit-platform-engine-1.12.2.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.12.2/junit-platform-commons-1.12.2.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.12.2/junit-platform-launcher-1.12.2.jar
+Progress (1): 3.1/35 kB
+Progress (1): 7.2/35 kB
+Progress (1): 11/35 kB 
+Progress (1): 15/35 kB
+Progress (1): 20/35 kB
+Progress (1): 24/35 kB
+Progress (1): 28/35 kB
+Progress (1): 32/35 kB
+Progress (1): 35 kB   
+                   
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.5.6/surefire-junit-platform-3.5.6.jar (35 kB at 63 kB/s)
+Progress (1): 3.3/152 kB
+Progress (1): 6.0/152 kB
+Progress (1): 8.8/152 kB
+Progress (1): 11/152 kB 
+Progress (1): 14/152 kB
+Progress (1): 17/152 kB
+Progress (1): 20/152 kB
+Progress (1): 22/152 kB
+Progress (2): 22/152 kB | 3.3/256 kB
+Progress (2): 25/152 kB | 3.3/256 kB
+Progress (2): 28/152 kB | 3.3/256 kB
+Progress (2): 30/152 kB | 3.3/256 kB
+Progress (2): 30/152 kB | 6.0/256 kB
+Progress (2): 30/152 kB | 9.1/256 kB
+Progress (2): 30/152 kB | 12/256 kB 
+Progress (2): 30/152 kB | 15/256 kB
+Progress (2): 30/152 kB | 17/256 kB
+Progress (2): 33/152 kB | 17/256 kB
+Progress (2): 33/152 kB | 20/256 kB
+Progress (2): 33/152 kB | 23/256 kB
+Progress (2): 36/152 kB | 23/256 kB
+Progress (2): 36/152 kB | 26/256 kB
+Progress (2): 39/152 kB | 26/256 kB
+Progress (2): 41/152 kB | 26/256 kB
+Progress (2): 41/152 kB | 28/256 kB
+Progress (2): 44/152 kB | 28/256 kB
+Progress (2): 44/152 kB | 31/256 kB
+Progress (2): 47/152 kB | 31/256 kB
+Progress (2): 47/152 kB | 34/256 kB
+Progress (2): 50/152 kB | 34/256 kB
+Progress (2): 50/152 kB | 36/256 kB
+Progress (2): 52/152 kB | 36/256 kB
+Progress (2): 55/152 kB | 36/256 kB
+Progress (2): 55/152 kB | 39/256 kB
+Progress (2): 55/152 kB | 42/256 kB
+Progress (2): 55/152 kB | 45/256 kB
+Progress (2): 59/152 kB | 45/256 kB
+Progress (2): 59/152 kB | 47/256 kB
+Progress (2): 59/152 kB | 50/256 kB
+Progress (2): 59/152 kB | 53/256 kB
+Progress (2): 59/152 kB | 57/256 kB
+Progress (2): 59/152 kB | 61/256 kB
+Progress (2): 59/152 kB | 65/256 kB
+Progress (2): 63/152 kB | 65/256 kB
+Progress (2): 63/152 kB | 69/256 kB
+Progress (2): 67/152 kB | 69/256 kB
+Progress (2): 67/152 kB | 73/256 kB
+Progress (2): 72/152 kB | 73/256 kB
+Progress (2): 72/152 kB | 77/256 kB
+Progress (2): 76/152 kB | 77/256 kB
+Progress (2): 76/152 kB | 81/256 kB
+Progress (2): 76/152 kB | 86/256 kB
+Progress (2): 80/152 kB | 86/256 kB
+Progress (2): 80/152 kB | 90/256 kB
+Progress (2): 84/152 kB | 90/256 kB
+Progress (2): 86/152 kB | 90/256 kB
+Progress (2): 86/152 kB | 94/256 kB
+Progress (2): 86/152 kB | 98/256 kB
+Progress (2): 90/152 kB | 98/256 kB
+Progress (2): 94/152 kB | 98/256 kB
+Progress (2): 98/152 kB | 98/256 kB
+Progress (2): 98/152 kB | 102/256 kB
+Progress (2): 98/152 kB | 106/256 kB
+Progress (2): 102/152 kB | 106/256 kB
+Progress (2): 102/152 kB | 110/256 kB
+Progress (2): 106/152 kB | 110/256 kB
+Progress (2): 106/152 kB | 114/256 kB
+Progress (2): 110/152 kB | 114/256 kB
+Progress (2): 110/152 kB | 118/256 kB
+Progress (2): 110/152 kB | 122/256 kB
+Progress (2): 115/152 kB | 122/256 kB
+Progress (2): 115/152 kB | 127/256 kB
+Progress (2): 119/152 kB | 127/256 kB
+Progress (2): 123/152 kB | 127/256 kB
+Progress (2): 123/152 kB | 131/256 kB
+Progress (2): 123/152 kB | 135/256 kB
+Progress (2): 123/152 kB | 139/256 kB
+Progress (2): 123/152 kB | 143/256 kB
+Progress (2): 123/152 kB | 147/256 kB
+Progress (2): 123/152 kB | 151/256 kB
+Progress (2): 123/152 kB | 155/256 kB
+Progress (2): 123/152 kB | 159/256 kB
+Progress (2): 123/152 kB | 163/256 kB
+Progress (2): 123/152 kB | 167/256 kB
+Progress (2): 123/152 kB | 172/256 kB
+Progress (2): 123/152 kB | 176/256 kB
+Progress (2): 123/152 kB | 180/256 kB
+Progress (2): 123/152 kB | 184/256 kB
+Progress (2): 123/152 kB | 188/256 kB
+Progress (2): 123/152 kB | 190/256 kB
+Progress (2): 123/152 kB | 194/256 kB
+Progress (2): 123/152 kB | 198/256 kB
+Progress (2): 127/152 kB | 198/256 kB
+Progress (2): 131/152 kB | 198/256 kB
+Progress (3): 131/152 kB | 198/256 kB | 3.3/18 kB
+Progress (3): 131/152 kB | 202/256 kB | 3.3/18 kB
+Progress (3): 131/152 kB | 202/256 kB | 6.0/18 kB
+Progress (3): 131/152 kB | 202/256 kB | 8.8/18 kB
+Progress (3): 131/152 kB | 202/256 kB | 12/18 kB 
+Progress (3): 131/152 kB | 206/256 kB | 12/18 kB
+Progress (3): 131/152 kB | 206/256 kB | 14/18 kB
+Progress (3): 135/152 kB | 206/256 kB | 14/18 kB
+Progress (3): 135/152 kB | 206/256 kB | 17/18 kB
+Progress (3): 135/152 kB | 211/256 kB | 17/18 kB
+Progress (3): 139/152 kB | 211/256 kB | 17/18 kB
+Progress (3): 139/152 kB | 211/256 kB | 18 kB   
+Progress (3): 143/152 kB | 211/256 kB | 18 kB
+Progress (3): 143/152 kB | 215/256 kB | 18 kB
+Progress (3): 147/152 kB | 215/256 kB | 18 kB
+Progress (3): 147/152 kB | 219/256 kB | 18 kB
+Progress (3): 151/152 kB | 219/256 kB | 18 kB
+Progress (3): 152 kB | 219/256 kB | 18 kB    
+Progress (3): 152 kB | 223/256 kB | 18 kB
+Progress (3): 152 kB | 227/256 kB | 18 kB
+Progress (3): 152 kB | 231/256 kB | 18 kB
+Progress (3): 152 kB | 235/256 kB | 18 kB
+Progress (3): 152 kB | 239/256 kB | 18 kB
+Progress (3): 152 kB | 243/256 kB | 18 kB
+Progress (3): 152 kB | 247/256 kB | 18 kB
+Progress (3): 152 kB | 252/256 kB | 18 kB
+Progress (3): 152 kB | 256/256 kB | 18 kB
+Progress (3): 152 kB | 256 kB | 18 kB    
+                                     
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.5.6/common-java5-3.5.6.jar (18 kB at 14 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.12.2/junit-platform-commons-1.12.2.jar (152 kB at 117 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.12.2/junit-platform-engine-1.12.2.jar (256 kB at 196 kB/s)
+Progress (1): 3.3/208 kB
+Progress (1): 6.0/208 kB
+Progress (1): 8.8/208 kB
+Progress (1): 11/208 kB 
+Progress (1): 14/208 kB
+Progress (1): 17/208 kB
+Progress (1): 20/208 kB
+Progress (1): 22/208 kB
+Progress (1): 25/208 kB
+Progress (1): 28/208 kB
+Progress (1): 30/208 kB
+Progress (1): 33/208 kB
+Progress (1): 36/208 kB
+Progress (1): 39/208 kB
+Progress (1): 41/208 kB
+Progress (1): 44/208 kB
+Progress (1): 47/208 kB
+Progress (1): 50/208 kB
+Progress (1): 52/208 kB
+Progress (1): 55/208 kB
+Progress (1): 59/208 kB
+Progress (1): 63/208 kB
+Progress (1): 67/208 kB
+Progress (1): 72/208 kB
+Progress (1): 76/208 kB
+Progress (1): 80/208 kB
+Progress (1): 84/208 kB
+Progress (1): 86/208 kB
+Progress (1): 90/208 kB
+Progress (1): 94/208 kB
+Progress (1): 98/208 kB
+Progress (1): 102/208 kB
+Progress (1): 106/208 kB
+Progress (1): 110/208 kB
+Progress (1): 115/208 kB
+Progress (1): 119/208 kB
+Progress (1): 123/208 kB
+Progress (1): 126/208 kB
+Progress (1): 130/208 kB
+Progress (1): 134/208 kB
+Progress (1): 138/208 kB
+Progress (1): 142/208 kB
+Progress (1): 147/208 kB
+Progress (1): 151/208 kB
+Progress (1): 155/208 kB
+Progress (1): 159/208 kB
+Progress (1): 163/208 kB
+Progress (1): 167/208 kB
+Progress (1): 171/208 kB
+Progress (1): 175/208 kB
+Progress (1): 179/208 kB
+Progress (1): 183/208 kB
+Progress (1): 187/208 kB
+Progress (1): 192/208 kB
+Progress (1): 194/208 kB
+Progress (1): 198/208 kB
+Progress (1): 202/208 kB
+Progress (1): 206/208 kB
+Progress (1): 208 kB    
+                    
+Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.12.2/junit-platform-launcher-1.12.2.jar (208 kB at 78 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/6.0.3/junit-platform-launcher-6.0.3.pom
+Progress (1): 3.2 kB
+                    
+Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/6.0.3/junit-platform-launcher-6.0.3.pom (3.2 kB at 6.0 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/6.0.3/junit-platform-launcher-6.0.3.jar
+Progress (1): 4.1/246 kB
+Progress (1): 7.3/246 kB
+Progress (1): 11/246 kB 
+Progress (1): 15/246 kB
+Progress (1): 20/246 kB
+Progress (1): 24/246 kB
+Progress (1): 28/246 kB
+Progress (1): 32/246 kB
+Progress (1): 36/246 kB
+Progress (1): 40/246 kB
+Progress (1): 44/246 kB
+Progress (1): 48/246 kB
+Progress (1): 52/246 kB
+Progress (1): 56/246 kB
+Progress (1): 61/246 kB
+Progress (1): 65/246 kB
+Progress (1): 69/246 kB
+Progress (1): 73/246 kB
+Progress (1): 77/246 kB
+Progress (1): 81/246 kB
+Progress (1): 85/246 kB
+Progress (1): 89/246 kB
+Progress (1): 93/246 kB
+Progress (1): 97/246 kB
+Progress (1): 101/246 kB
+Progress (1): 106/246 kB
+Progress (1): 110/246 kB
+Progress (1): 114/246 kB
+Progress (1): 118/246 kB
+Progress (1): 122/246 kB
+Progress (1): 126/246 kB
+Progress (1): 130/246 kB
+Progress (1): 134/246 kB
+Progress (1): 138/246 kB
+Progress (1): 142/246 kB
+Progress (1): 147/246 kB
+Progress (1): 151/246 kB
+Progress (1): 155/246 kB
+Progress (1): 159/246 kB
+Progress (1): 163/246 kB
+Progress (1): 167/246 kB
+Progress (1): 171/246 kB
+Progress (1): 175/246 kB
+Progress (1): 179/246 kB
+Progress (1): 183/246 kB
+Progress (1): 187/246 kB
+Progress (1): 192/246 kB
+Progress (1): 196/246 kB
+Progress (1): 200/246 kB
+Progress (1): 204/246 kB
+Progress (1): 208/246 kB
+Progress (1): 212/246 kB
+Progress (1): 216/246 kB
+Progress (1): 220/246 kB
+Progress (1): 224/246 kB
+Progress (1): 228/246 kB
+Progress (1): 233/246 kB
+Progress (1): 237/246 kB
+Progress (1): 241/246 kB
+Progress (1): 245/246 kB
+Progress (1): 246 kB    
+                    
+Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/6.0.3/junit-platform-launcher-6.0.3.jar (246 kB at 123 kB/s)
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.projectpos_2026.ProjectPos2026ApplicationTests
+19:12:03.188 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.projectpos_2026.ProjectPos2026ApplicationTests]: ProjectPos2026ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+19:12:03.337 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.projectpos_2026.ProjectPos2026Application for test class com.example.projectpos_2026.ProjectPos2026ApplicationTests
+19:12:03.473 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.projectpos_2026.ProjectPos2026ApplicationTests]: ProjectPos2026ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+19:12:03.475 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.projectpos_2026.ProjectPos2026Application for test class com.example.projectpos_2026.ProjectPos2026ApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-20T19:12:03.978+08:00  INFO 5708 --- [           main] c.e.p.ProjectPos2026ApplicationTests     : Starting ProjectPos2026ApplicationTests using Java 21 with PID 5708 (started by ASUS in C:\Users\ASUS\IdeaProjects\ProjectPos_2026)
+2026-10-20T19:12:03.980+08:00  INFO 5708 --- [           main] c.e.p.ProjectPos2026ApplicationTests     : No active profile set, falling back to 1 default profile: "default"
+2026-10-20T19:12:04.877+08:00  INFO 5708 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-20T19:12:05.018+08:00  INFO 5708 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 121 ms. Found 1 JPA repository interface.
+2026-10-20T19:12:07.129+08:00  INFO 5708 --- [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-20T19:12:07.557+08:00  INFO 5708 --- [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-20T19:12:09.226+08:00  INFO 5708 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-20T19:12:09.312+08:00  INFO 5708 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-20T19:12:09.776+08:00  INFO 5708 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:pos_test user=SA
+2026-10-20T19:12:09.781+08:00  INFO 5708 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-20T19:12:09.940+08:00  INFO 5708 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:pos_test]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: POS_TEST/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-20T19:12:12.278+08:00  INFO 5708 --- [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-20T19:12:12.393+08:00  INFO 5708 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-20T19:12:12.794+08:00  INFO 5708 --- [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-20T19:12:17.393+08:00  INFO 5708 --- [           main] c.e.p.ProjectPos2026ApplicationTests     : Started ProjectPos2026ApplicationTests in 13.827 seconds (process running for 15.495)
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (C:\Users\ASUS\.m2\repository\net\bytebuddy\byte-buddy-agent\1.18.11\byte-buddy-agent-1.18.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.36 s -- in com.example.projectpos_2026.ProjectPos2026ApplicationTests
+[INFO] Running com.example.projectpos_2026.service.ProductServiceTests
+2026-10-20T19:12:18.256+08:00  INFO 5708 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.projectpos_2026.service.ProductServiceTests]: ProductServiceTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-20T19:12:18.292+08:00  INFO 5708 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.projectpos_2026.ProjectPos2026Application for test class com.example.projectpos_2026.service.ProductServiceTests
+2026-10-20T19:12:18.299+08:00  INFO 5708 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.projectpos_2026.service.ProductServiceTests]: ProductServiceTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-20T19:12:18.315+08:00  INFO 5708 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.projectpos_2026.ProjectPos2026Application for test class com.example.projectpos_2026.service.ProductServiceTests
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.949 s -- in com.example.projectpos_2026.service.ProductServiceTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  41.103 s
+[INFO] Finished at: 2026-10-20T19:12:19+08:00
+[INFO] ------------------------------------------------------------------------

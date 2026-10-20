@@ -1,0 +1,4 @@
+<!DOCTYPE html><html lang="en" xmlns:th="http://www.thymeleaf.org"><body>
+<header th:fragment="nav"><a class="brand" th:href="@{/products}">Market POS <small>2026</small></a><nav><a th:href="@{/products}">Products</a><a th:href="@{/sales/new}">New sale</a><a th:href="@{/sales}">Transactions and returns</a></nav></header>
+<div th:fragment="messages"><p class="success" th:if="${message}" th:text="${message}"></p><p class="error" th:if="${error}" th:text="${error}"></p></div>
+</body></html>
