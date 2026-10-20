@@ -1,0 +1,12 @@
+{
+  "source": "deliverables\\report\\report_assets\\13-return-detail.png",
+  "source_sha256": "66bd44873412926857e8665ca20c5cf6f47d890fdb5287cccd5c6ce3595e9af6",
+  "output": "refund-ledger-detail.png",
+  "crop_box": [
+    20,
+    770,
+    780,
+    890
+  ],
+  "content": "unaltered pixels from genuine earlier return verification"
+}

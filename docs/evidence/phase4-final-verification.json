@@ -1,0 +1,109 @@
+{
+  "recorded_at": "2026-10-20T14:54:53.348593+00:00",
+  "slide_count": 15,
+  "english_visible_slides": true,
+  "speaker_notes_match_script": true,
+  "spoken_words": 763,
+  "planned_duration_seconds": 450,
+  "duration_is_estimate_not_recorded_video": true,
+  "bilingual_defense_questions": 20,
+  "complete_word_and_pdf_text_verified": true,
+  "native_table_slides": [
+    3,
+    4,
+    5,
+    10,
+    13,
+    14
+  ],
+  "native_chart_slide": 6,
+  "embedded_chart_workbook_verified": true,
+  "chart_x_minutes": [
+    0.0,
+    3.8274,
+    8.2647,
+    17.1001,
+    30.5262,
+    77.3344,
+    85.8507
+  ],
+  "chart_y_remaining_items": [
+    18,
+    16,
+    10,
+    3,
+    2,
+    1,
+    0
+  ],
+  "real_progress_csv_sha256": "1101eaed48bca909f22f1c1ec1defb4a0c08bb1c280a2b9c9146d588d9ac4d0e",
+  "presentation_package_and_layout_findings": 0,
+  "actual_word_pdf_pages": 37,
+  "actual_powerpoint_pdf_pages": 15,
+  "all_37_word_pages_and_15_slides_visually_reviewed": true,
+  "visual_result": "No missing glyphs, clipping, overlaps or broken pagination observed; real Office output inspected.",
+  "recording_products_stock": [
+    10,
+    10
+  ],
+  "original_receipt_and_refund_preserved": true,
+  "video_recorded": false,
+  "video_uploaded": false,
+  "video_url": "[Pending upload]",
+  "deliverables": [
+    {
+      "file": "deliverables\\presentation\\Video_Script_EN.pdf",
+      "sha256": "d6312660150e4620682b837b0fa508a97eee23f47f30dc15b599c77230e3ade6",
+      "pages": 9
+    },
+    {
+      "file": "deliverables\\presentation\\Video_Script_EN.docx",
+      "sha256": "3aef816c04013b2fefe12207a70fa2d9fde150cf871d7eed616abf7c40b85aef",
+      "paragraphs": 106,
+      "all_body_paragraphs_present_in_pdf": true
+    },
+    {
+      "file": "deliverables\\presentation\\Project_Explanation_ZH.pdf",
+      "sha256": "32de65db59b4e70df0001df3f395263bd222eb6d96652f3dd966de324ebfd21c",
+      "pages": 12
+    },
+    {
+      "file": "deliverables\\presentation\\Project_Explanation_ZH.docx",
+      "sha256": "c98534ca2291378c523ae8751ca9b226c0a88d29f27927885321ce11fb739d4c",
+      "paragraphs": 136,
+      "all_body_paragraphs_present_in_pdf": true
+    },
+    {
+      "file": "deliverables\\presentation\\Recording_Guide_ZH.pdf",
+      "sha256": "a93e6d0a1abc62642bdee1204d83171103b964a6ad1e795d99b7f5419d7d8757",
+      "pages": 6
+    },
+    {
+      "file": "deliverables\\presentation\\Recording_Guide_ZH.docx",
+      "sha256": "20ea73b501ec6c11d48044475fba5d4c1b20b0ce0bcfe6128938861a32cbe4de",
+      "paragraphs": 74,
+      "all_body_paragraphs_present_in_pdf": true
+    },
+    {
+      "file": "deliverables\\presentation\\Defense_Questions_Bilingual.pdf",
+      "sha256": "4ab08fca31693ab505eceef812bad9f638e433114efe8b069de1f67cc31c9ecb",
+      "pages": 10
+    },
+    {
+      "file": "deliverables\\presentation\\Defense_Questions_Bilingual.docx",
+      "sha256": "793f76927552b2b1f23e1ceb2c1527ef8fd7742462e1f1855a4b679fbd79ad68",
+      "paragraphs": 111,
+      "all_body_paragraphs_present_in_pdf": true
+    },
+    {
+      "file": "deliverables\\presentation\\POS_Presentation.pdf",
+      "sha256": "85de369b46150bb5df995229ba385db24b9886f5c7430a2b3d342fa2d3e40c9e",
+      "pages": 15
+    },
+    {
+      "file": "deliverables\\presentation\\POS_Presentation.pptx",
+      "sha256": "3471eed7b1a42432a5e55de3ee1e72791927568ff76a211c83d90d412721420d",
+      "slides": 15
+    }
+  ]
+}

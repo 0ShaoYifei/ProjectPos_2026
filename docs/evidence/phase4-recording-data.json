@@ -1,0 +1,27 @@
+{
+  "recordedAt": "2026-10-20T14:06:17.552Z",
+  "baseUrl": "http://127.0.0.1:8080",
+  "tag": "20261020",
+  "products": [
+    {
+      "barcode": "REC-20261020-RICE",
+      "name": "Recording Rice 1kg",
+      "expectedUnitPrice": "6.50",
+      "expectedInitialStock": 10,
+      "created": true,
+      "observedRow": "REC-20261020-RICE\tRecording Rice 1kg\t6.50\t10\tActive\tEdit",
+      "editPath": "/products/4/edit"
+    },
+    {
+      "barcode": "REC-20261020-MILK",
+      "name": "Recording Milk 1L",
+      "expectedUnitPrice": "3.80",
+      "expectedInitialStock": 10,
+      "created": true,
+      "observedRow": "REC-20261020-MILK\tRecording Milk 1L\t3.80\t10\tActive\tEdit",
+      "editPath": "/products/5/edit"
+    }
+  ],
+  "transactionsCreated": 0,
+  "existingDataReset": false
+}

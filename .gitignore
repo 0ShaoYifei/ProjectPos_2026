@@ -44,3 +44,6 @@ references/
 /deliverables/**/*.docx
 /deliverables/quizzes/*.pdf
 /deliverables/report/POS_Technical_Report.pdf
+/deliverables/presentation/*.pptx
+/deliverables/presentation/*.pdf
+.chart-data-*/
