@@ -1,0 +1,33 @@
+@startuml
+skinparam backgroundColor white
+skinparam defaultFontName Arial
+skinparam defaultFontSize 16
+skinparam shadowing false
+skinparam ArrowColor #333333
+skinparam classBackgroundColor #F5F8F8
+skinparam classBorderColor #354F52
+skinparam packageBackgroundColor #F5F8F8
+skinparam packageBorderColor #354F52
+skinparam sequenceParticipantBackgroundColor #F5F8F8
+skinparam sequenceParticipantBorderColor #354F52
+skinparam dpi 160
+actor Cashier
+participant ":POS System" as POS
+Cashier -> POS: startNewSale()
+POS --> Cashier: available products and empty cart
+loop Each purchased product
+ Cashier -> POS: addItem(productId, quantity)
+ POS --> Cashier: line details and running total
+end
+Cashier -> POS: makeCashPayment(cash)
+alt Valid stock and sufficient payment
+ POS --> Cashier: receipt, total and change
+else Insufficient stock or payment
+ POS --> Cashier: English error; cart retained
+end
+note over POS
+Inventory and transaction records change
+only after successful checkout.
+end note
+
+@enduml

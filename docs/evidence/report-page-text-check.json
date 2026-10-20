@@ -1,0 +1,182 @@
+[
+  {
+    "pdf_page": 1,
+    "characters": 264,
+    "preview": " \n \n \n \nSoftware Engineering Practice \n \nAnalysis and Design of a PoS \nSystem  \n \n \n \n \nName: Yifei Shao \nNUIST ID: 202383890019 \nSETU ID: 2"
+  },
+  {
+    "pdf_page": 2,
+    "characters": 3135,
+    "preview": " \n \nContents \nChapter 1 Introduction ................................................................................................... 1 \n"
+  },
+  {
+    "pdf_page": 3,
+    "characters": 1642,
+    "preview": " \n \n7.3 Cash sale and receipt generation .................................................................... 23 \n7.4 Return processing and "
+  },
+  {
+    "pdf_page": 4,
+    "characters": 2560,
+    "preview": " \n1 \nChapter 1 Introduction \nProjectPos_2026 is a small supermarket Point-of-Sale application developed for the \nindividual Software Enginee"
+  },
+  {
+    "pdf_page": 5,
+    "characters": 1672,
+    "preview": " \n2 \nChapter 2 Part 1 Agile Development Process \n2.1 Individual Scrum adaptation \nThe project uses an individual adaptation of Scrum: the st"
+  },
+  {
+    "pdf_page": 6,
+    "characters": 1631,
+    "preview": " \n3 \nID Epic User story \nPriorit\ny \nResult \nP07 Receipts \nAs a customer, I want a receipt preserving \nthe original purchase details. \nMust V"
+  },
+  {
+    "pdf_page": 7,
+    "characters": 1685,
+    "preview": " \n4 \n2.3 Sprint planning and increment records \nThe assignment suggests three-day or one-week sprints. The following three-day \nschedule is "
+  },
+  {
+    "pdf_page": 8,
+    "characters": 977,
+    "preview": " \n5 \nFailed attempts remain beside corrected passing runs. These records support adjustment \nbut are not evidence of unrecorded meetings or "
+  },
+  {
+    "pdf_page": 9,
+    "characters": 971,
+    "preview": " \n6 \nChapter 3 Part 2 Requirements and Use Case Analysis \n3.1 Functional requirements and business rules \nThe cashier manages unique barcode"
+  },
+  {
+    "pdf_page": 10,
+    "characters": 1026,
+    "preview": " \n7 \n3.2 Use case context \n \nFigure 2  Use case context. The cashier is the direct application actor.  \nThe customer participates in the bus"
+  },
+  {
+    "pdf_page": 11,
+    "characters": 2405,
+    "preview": " \n8 \nand does not reduce stock. Success guarantee: one paid sale and its snapshots are \nsaved, stock is reduced, cash and change are recorde"
+  },
+  {
+    "pdf_page": 12,
+    "characters": 1728,
+    "preview": " \n9 \n1. The cashier opens Transactions and returns and enters the sale number or chooses \na receipt. \n2. The system displays original items,"
+  },
+  {
+    "pdf_page": 13,
+    "characters": 74,
+    "preview": " \n10 \n \nFigure 3  Process Sale SSD with stock and payment alternatives.  \n"
+  },
+  {
+    "pdf_page": 14,
+    "characters": 77,
+    "preview": " \n11 \n \nFigure 4  Handle Returns SSD including invalid quantity rejection.  \n"
+  },
+  {
+    "pdf_page": 15,
+    "characters": 1090,
+    "preview": " \n12 \nChapter 4 Domain Model \n4.1 Conceptual classes \nThe model identifies four business concepts. Product describes a catalog item and its "
+  },
+  {
+    "pdf_page": 16,
+    "characters": 379,
+    "preview": " \n13 \nCash payment is represented by Sale attributes rather than a separate Payment entity. \nStock is a quantity on Product instead of a sep"
+  },
+  {
+    "pdf_page": 17,
+    "characters": 894,
+    "preview": " \n14 \nChapter 5 Logical Architecture \n5.1 MVC and responsibility boundaries \nSpring MVC separates presentation from business use cases. Thym"
+  },
+  {
+    "pdf_page": 18,
+    "characters": 714,
+    "preview": " \n15 \n \nFigure 6  Logical packages and their actual dependencies.  \n5.2 Architectural rationale \nRefund and inventory rules can be tested wi"
+  },
+  {
+    "pdf_page": 19,
+    "characters": 152,
+    "preview": " \n16 \nitems needed before rendering a receipt. The design remains understandable without \nhiding business transactions behind unnecessary ab"
+  },
+  {
+    "pdf_page": 20,
+    "characters": 1104,
+    "preview": " \n17 \nChapter 6 Object Oriented Design \n6.1 Classes and responsibilities \nTable 5  Important design responsibilities  \nClass Responsibility "
+  },
+  {
+    "pdf_page": 21,
+    "characters": 111,
+    "preview": " \n18 \n \nFigure 7  Design classes for all four persistent entities. Selected fields and operations are shown.  \n"
+  },
+  {
+    "pdf_page": 22,
+    "characters": 497,
+    "preview": " \n19 \n \nFigure 8  Selected Process Sale controller, service and repository dependencies.  \n6.2 Interaction diagrams \nSaleController enters t"
+  },
+  {
+    "pdf_page": 23,
+    "characters": 510,
+    "preview": " \n20 \n \nFigure 9  Internal checkout collaboration within one transaction.  \nReturns use a locked SaleItem to serialize competing requests. A"
+  },
+  {
+    "pdf_page": 24,
+    "characters": 947,
+    "preview": " \n21 \n \nFigure 10  Internal return collaboration using actual controller, service and repository roles.  \n6.3 Responsibility assignment and "
+  },
+  {
+    "pdf_page": 25,
+    "characters": 311,
+    "preview": " \n22 \nPessimistic locks protect current stock and returnable quantities inside transactions. \nProduct\u2019s JPA version and the submitted form v"
+  },
+  {
+    "pdf_page": 26,
+    "characters": 1720,
+    "preview": " \n23 \nChapter 7 Implementation \n7.1 Configuration and persistence \nMaven retains the supplied Spring Boot parent and adds H2 only in test sc"
+  },
+  {
+    "pdf_page": 27,
+    "characters": 1092,
+    "preview": " \n24 \ndecimal cash and insufficient payment. BigDecimal avoids binary floating-point errors, \nincluding the 0.10 multiplied by three scenari"
+  },
+  {
+    "pdf_page": 28,
+    "characters": 512,
+    "preview": " \n25 \n \nFigure 13  Actual return form and refund ledger after one rice unit was returned for CNY 6.50.  \nController advice renders business "
+  },
+  {
+    "pdf_page": 29,
+    "characters": 1760,
+    "preview": " \n26 \nChapter 8 Testing and Results \n8.1 Actual environment and test separation \nVerification ran on Windows 11 with Oracle JDK 21 and the M"
+  },
+  {
+    "pdf_page": 30,
+    "characters": 1467,
+    "preview": " \n27 \n8.2 Functional and exceptional scenarios \nTable 7  Verified business scenarios  \nScenario Expected result Observed result \nMulti-produ"
+  },
+  {
+    "pdf_page": 31,
+    "characters": 2004,
+    "preview": " \n28 \n8.3 Real database evidence \nDirect mysql queries verified MySQL 8.0.44, pos_2026_db and four InnoDB tables. The \nsaved sale has total "
+  },
+  {
+    "pdf_page": 32,
+    "characters": 1813,
+    "preview": " \n29 \nChapter 9 Git and GitHub Version Control \n9.1 Initial state and individual authorship \nInitial status, branch, remote and log commands"
+  },
+  {
+    "pdf_page": 33,
+    "characters": 1258,
+    "preview": " \n30 \n9.3 Genuine command evidence and remote handoff \nCommand journals contain actual commands and exit codes. The first journal includes a"
+  },
+  {
+    "pdf_page": 34,
+    "characters": 1370,
+    "preview": " \n31 \nChapter 10 Conclusion \nThe application supports both required use cases with catalog management, exact cash \ncalculations, receipts, t"
+  },
+  {
+    "pdf_page": 35,
+    "characters": 1762,
+    "preview": " \n32 \nAppendix A Source and Evidence Index \nAuthoritative specification: references/Software Engineering Practice Assignment.docx. \nCover ba"
+  },
+  {
+    "pdf_page": 36,
+    "characters": 774,
+    "preview": " \n33 \n \n// ReturnService.process \nproduct.restoreStock(quantity); \nitem.recordReturn(quantity); \nreturn returns.saveAndFlush(new ReturnRecor"
+  }
+]

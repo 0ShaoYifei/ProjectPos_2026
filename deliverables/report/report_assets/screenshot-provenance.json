@@ -1,0 +1,50 @@
+[
+  {
+    "output": "11-products-detail.png",
+    "source": "docs\\evidence\\screenshots\\01-products.png",
+    "crop_box": [
+      170,
+      100,
+      1270,
+      580
+    ],
+    "source_sha256": "eebb39dee69f9c595af0756367c87faea816baca3bdaee0ebc7c31b736a6e71f",
+    "pixel_content": "unaltered crop"
+  },
+  {
+    "output": "12-receipt-detail.png",
+    "source": "docs\\evidence\\screenshots\\05-paid-receipt.png",
+    "crop_box": [
+      320,
+      150,
+      1120,
+      790
+    ],
+    "source_sha256": "f355e80eac1d9994ed3ab74ac373bf10364be550d13db280b100883a2ad83659",
+    "pixel_content": "unaltered crop"
+  },
+  {
+    "output": "13-return-detail.png",
+    "source": "docs\\evidence\\screenshots\\07-return-refund.png",
+    "crop_box": [
+      320,
+      815,
+      1120,
+      1740
+    ],
+    "source_sha256": "0a8bee0e027eaa0a59ca55fdae040ad8f8856d782fb471d3b5bfcfbbcfbde1c8",
+    "pixel_content": "unaltered crop"
+  },
+  {
+    "output": "14-payment-error-detail.png",
+    "source": "docs\\evidence\\screenshots\\04-insufficient-payment.png",
+    "crop_box": [
+      170,
+      105,
+      1270,
+      810
+    ],
+    "source_sha256": "357b8bb8882ea28e214a28744808c7fe3eded1f4034ecd4debbf3ca03c4dafc2",
+    "pixel_content": "unaltered crop"
+  }
+]

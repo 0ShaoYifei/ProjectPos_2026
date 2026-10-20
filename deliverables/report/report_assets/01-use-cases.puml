@@ -1,0 +1,31 @@
+@startuml
+skinparam backgroundColor white
+skinparam defaultFontName Arial
+skinparam defaultFontSize 16
+skinparam shadowing false
+skinparam ArrowColor #333333
+skinparam classBackgroundColor #F5F8F8
+skinparam classBorderColor #354F52
+skinparam packageBackgroundColor #F5F8F8
+skinparam packageBorderColor #354F52
+skinparam sequenceParticipantBackgroundColor #F5F8F8
+skinparam sequenceParticipantBorderColor #354F52
+skinparam dpi 160
+left to right direction
+actor Cashier
+rectangle "ProjectPos_2026" {
+ usecase "Process Sale" as Sale
+ usecase "Handle Returns" as Returns
+ usecase "Manage Products\nand Inventory" as Products
+ usecase "Review Transactions\nand Receipts" as Review
+}
+Cashier -- Sale
+Cashier -- Returns
+Cashier -- Products
+Cashier -- Review
+note bottom of Returns
+Customer provides the receipt and goods.
+Cashier interacts with the application.
+end note
+
+@enduml
