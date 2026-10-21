@@ -1,0 +1,28 @@
+{
+  "recorded_at": "2026-10-21T08:31:58.594259+00:00",
+  "cause": "IDEA did not receive DB_PASSWORD; MySQL rejected authentication and Spring Boot exited",
+  "private_configuration_ignored_by_git": true,
+  "db_password_environment_present_in_successful_run": false,
+  "successful_runtime": "Amazon Corretto 18.0.2",
+  "application_pid_at_checkpoint": 10612,
+  "maven_java": "Oracle JDK 21",
+  "maven_command": ".\\mvnw.cmd -o clean package -DargLine=-javaagent:C:\\Users\\ASUS\\.m2\\repository\\org\\mockito\\mockito-core\\5.23.0\\mockito-core-5.23.0.jar",
+  "test_counts": {
+    "tests": 21,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "build": "BUILD SUCCESS",
+  "real_browser_checks": 6,
+  "both_localhost_origins_verified": true,
+  "browser_checks_read_only": true,
+  "mysql_version": "8.0.44",
+  "database": "pos_2026_db",
+  "original_inventory_and_transactions_preserved": true,
+  "known_database_password_present_in_jar": false,
+  "jar_sha256": "246885524efdb4d2ead895fc9bf811055279c241c45da8b072c3853ea020b50f",
+  "source_config_sha256": "8f11dd354a661e66dcd34d49159c22ddd8a47efff3a0a9bab6ec64d554785249",
+  "background_instance_left_running": true,
+  "initial_restricted_test_run": "Interrupted after Mockito dynamic attach pipe Windows error 5; explicit premain retry passed"
+}

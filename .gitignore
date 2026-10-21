@@ -47,3 +47,6 @@ references/
 /deliverables/presentation/*.pptx
 /deliverables/presentation/*.pdf
 .chart-data-*/
+# Active JVM output stays local; dated immutable snapshots are retained as evidence.
+/docs/evidence/2026-10-21-local-startup-run.log
+/docs/evidence/2026-10-21-local-startup-stderr.log

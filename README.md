@@ -7,10 +7,10 @@ A small supermarket POS for an individual Software Engineering Practice project.
 Requirements: Java 17 or later (verified here with Oracle JDK 21), MySQL 8 and internet access for the first Maven wrapper build. Maven 3.8.5 is supplied by the wrapper. The original Spring Boot 4.1.1 parent is retained.
 
 1. Ensure the MySQL database `pos_2026_db` exists. For a new installation: `CREATE DATABASE pos_2026_db CHARACTER SET utf8mb4;`.
-2. Set `$env:DB_USERNAME='root'` and `$env:DB_PASSWORD='your_local_password'` in your own PowerShell session. Never commit the value.
-3. Run `.\mvnw.cmd spring-boot:run` and open http://127.0.0.1:8080.
+2. Supply the password using `DB_PASSWORD`, or create the ignored `.local/database.properties` with `pos.local.database-password=your_local_password`. A safe example is in `docs/local-database.properties.example`. `DB_PASSWORD` takes precedence. Never commit the actual value.
+3. Run `ProjectPos2026Application` in IntelliJ IDEA with the project root as its working directory, or run `.\mvnw.cmd spring-boot:run`. Wait for `Started ProjectPos2026Application`, then open http://127.0.0.1:8080. Direct IDEA runs read the same private local configuration; a PowerShell environment variable is not automatically shared with an already open IDEA instance.
 
-The connection URL can be overridden using `DB_URL`, and the port using `PORT`. Hibernate creates missing tables with `ddl-auto=update`; it does not seed or delete application data. The local launcher `scripts/run-local.ps1` also supports the private, ignored password file retained during the initial inspection.
+The connection URL can be overridden using `DB_URL`, the username using `DB_USERNAME`, and the port using `PORT`. Hibernate creates missing tables with `ddl-auto=update`; it does not seed or delete application data. The local launcher `scripts/run-local.ps1` also supports the private, ignored password file retained during the initial inspection. See `docs/local-startup.md` if startup fails or the browser refuses the connection.
 
 ## Use the application
 
