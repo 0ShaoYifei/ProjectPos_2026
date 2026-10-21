@@ -1,0 +1,4 @@
+# Copy to .local/database.properties under the project root, then set your own password.
+# .local/ is ignored by Git. Do not put credentials in tracked source files.
+# For special characters use standard Java .properties escaping (for example, \\ for a backslash).
+pos.local.database-password=replace_with_your_mysql_password

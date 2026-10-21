@@ -1,0 +1,44 @@
+{
+  "recordedAt": "2026-10-21T08:29:20.090Z",
+  "checks": [
+    {
+      "url": "http://127.0.0.1:8080/",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:8080/products;jsessionid=912CD5BE8CEDC92EC6EB1EFBB5C29FCE",
+      "expectedContent": "Products"
+    },
+    {
+      "url": "http://localhost:8080/",
+      "status": 200,
+      "finalUrl": "http://localhost:8080/products;jsessionid=4322631A77B911181A46A60B06A33A99",
+      "expectedContent": "Products"
+    },
+    {
+      "url": "http://127.0.0.1:8080/products",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:8080/products",
+      "expectedContent": "REC-20261020-RICE"
+    },
+    {
+      "url": "http://127.0.0.1:8080/sales/new",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:8080/sales/new",
+      "expectedContent": "Complete sale"
+    },
+    {
+      "url": "http://127.0.0.1:8080/sales",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:8080/sales",
+      "expectedContent": "Transactions and returns"
+    },
+    {
+      "url": "http://127.0.0.1:8080/sales/1",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:8080/sales/1",
+      "expectedContent": "Handle returns"
+    }
+  ],
+  "pageErrors": [],
+  "mode": "read-only GET navigation; no form submissions",
+  "transactionsCreated": 0
+}

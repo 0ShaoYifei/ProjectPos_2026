@@ -1,0 +1,69 @@
+
+[2026-10-21T16:21:30.7288832+08:00] git switch -c fix/local-startup
+Switched to a new branch 'fix/local-startup'
+exit=0
+
+[2026-10-21T16:32:52.9580661+08:00] git add .gitignore README.md src\main\resources\application.properties docs\local-startup.md docs\local-database.properties.example scripts\verify-startup.cjs docs\evidence
+warning: in the working copy of 'docs/evidence/2026-10-21-local-startup-fix.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/evidence/2026-10-21-startup-browser-verification.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/local-database.properties.example', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/local-startup.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'scripts/verify-startup.cjs', LF will be replaced by CRLF the next time Git touches it
+exit=0
+
+[2026-10-21T16:33:06.4078863+08:00] git add docs\evidence\2026-10-21-local-startup-source-audit.json
+exit=0
+
+[2026-10-21T16:33:06.6366801+08:00] git diff --cached --check
+exit=0
+
+[2026-10-21T16:33:06.8876820+08:00] git diff --cached --stat
+ .gitignore                                         |   3 +
+ README.md                                          |   6 +-
+ .../evidence/2026-10-21-local-startup-database.log |  20 ++++
+ docs/evidence/2026-10-21-local-startup-fix.md      |  24 +++++
+ .../2026-10-21-local-startup-package-initial.log   |  76 ++++++++++++++
+ docs/evidence/2026-10-21-local-startup-package.log | 115 +++++++++++++++++++++
+ .../2026-10-21-local-startup-run-snapshot.log      |  44 ++++++++
+ .../2026-10-21-local-startup-source-audit.json     |   8 ++
+ .../2026-10-21-local-startup-verification.json     |  28 +++++
+ .../2026-10-21-startup-browser-verification.json   |  44 ++++++++
+ .../2026-10-21-startup-browser-verification.log    |   1 +
+ .../evidence/2026-10-21-test-attach-diagnostic.log |   6 ++
+ docs/evidence/development-log.md                   |   2 +
+ docs/evidence/screenshots/12-startup-fixed.png     | Bin 0 -> 43129 bytes
+ docs/local-database.properties.example             |   4 +
+ docs/local-startup.md                              |  15 +++
+ scripts/verify-startup.cjs                         |  42 ++++++++
+ src/main/resources/application.properties          |   4 +-
+ 18 files changed, 438 insertions(+), 4 deletions(-)
+exit=0
+
+[2026-10-21T16:33:07.1440403+08:00] git commit -m fix: load private database credentials for direct IDEA startup
+[fix/local-startup fc78d86] fix: load private database credentials for direct IDEA startup
+ 18 files changed, 438 insertions(+), 4 deletions(-)
+ create mode 100644 docs/evidence/2026-10-21-local-startup-database.log
+ create mode 100644 docs/evidence/2026-10-21-local-startup-fix.md
+ create mode 100644 docs/evidence/2026-10-21-local-startup-package-initial.log
+ create mode 100644 docs/evidence/2026-10-21-local-startup-package.log
+ create mode 100644 docs/evidence/2026-10-21-local-startup-run-snapshot.log
+ create mode 100644 docs/evidence/2026-10-21-local-startup-source-audit.json
+ create mode 100644 docs/evidence/2026-10-21-local-startup-verification.json
+ create mode 100644 docs/evidence/2026-10-21-startup-browser-verification.json
+ create mode 100644 docs/evidence/2026-10-21-startup-browser-verification.log
+ create mode 100644 docs/evidence/2026-10-21-test-attach-diagnostic.log
+ create mode 100644 docs/evidence/screenshots/12-startup-fixed.png
+ create mode 100644 docs/local-database.properties.example
+ create mode 100644 docs/local-startup.md
+ create mode 100644 scripts/verify-startup.cjs
+exit=0
+
+[2026-10-21T16:34:24.5575723+08:00] git switch main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+exit=0
+
+[2026-10-21T16:34:25.0622971+08:00] git merge --no-ff --no-commit fix/local-startup
+Automatic merge went well; stopped before committing as requested
+exit=0
